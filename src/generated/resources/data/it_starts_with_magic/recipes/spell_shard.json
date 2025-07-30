@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "it_starts_with_magic:pell"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "item": "it_starts_with_magic:spell_shard"
+  }
+}

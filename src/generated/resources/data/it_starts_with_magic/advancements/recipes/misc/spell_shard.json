@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pell": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "it_starts_with_magic:pell"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "it_starts_with_magic:spell_shard"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_pell",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "it_starts_with_magic:spell_shard"
+    ]
+  },
+  "sends_telemetry_event": false
+}

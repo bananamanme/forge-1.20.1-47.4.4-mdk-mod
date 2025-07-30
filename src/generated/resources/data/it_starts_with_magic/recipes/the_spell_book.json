@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:book"
+    },
+    "E": {
+      "item": "minecraft:echo_shard"
+    },
+    "S": {
+      "item": "it_starts_with_magic:spell_shard"
+    }
+  },
+  "pattern": [
+    "SES",
+    "EBE",
+    "SES"
+  ],
+  "result": {
+    "item": "it_starts_with_magic:the_spell_book"
+  },
+  "show_notification": true
+}

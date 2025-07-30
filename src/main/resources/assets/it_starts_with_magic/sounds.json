@@ -1,0 +1,10 @@
+{
+  "tech": {
+    "sounds": [
+      {
+        "name": "it_starts_with_magic:tech",
+        "stream": true
+      }
+    ]
+  }
+}
