@@ -21,6 +21,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.PEll.get());
                         output.accept(ModItems.THESPELLBOOK.get());
                         output.accept(ModItems.TECH_MUSIC_DISC.get());
+                        output.accept(ModItems.WEIRD_RYTHEM_MUSIC_DISC.get());
                     })
 
                     .build());

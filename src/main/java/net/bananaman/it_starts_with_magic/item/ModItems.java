@@ -12,6 +12,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import static net.bananaman.it_starts_with_magic.sound.ModSounds.TECH;
+import static net.bananaman.it_starts_with_magic.sound.ModSounds.WEIRD_RYTHEM;
+
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ItStartsWithMagicMod.MOD_ID);
@@ -23,7 +26,12 @@ public class ModItems {
             () -> new TheSpellBook(new Item.Properties().stacksTo(1).rarity(Rarity.EPIC)));
 
     public static final RegistryObject<Item> TECH_MUSIC_DISC = ITEMS.register("tech_music_disc",
-            () -> new RecordItem(6, ModSounds.TECH, new Item.Properties().stacksTo(1),1920));
+            () -> new RecordItem(1, TECH.get(), new Item.Properties().stacksTo(1), 96));
+
+    public static final RegistryObject<Item> WEIRD_RYTHEM_MUSIC_DISC = ITEMS.register("weird_rythem_music_disc",
+            () -> new RecordItem(1, WEIRD_RYTHEM.get(), new Item.Properties().stacksTo(1), 285));
+
+
 
 
     public static void register(IEventBus eventBus) {

@@ -1,8 +1,18 @@
 {
   "tech": {
+    "category": "record",
     "sounds": [
       {
         "name": "it_starts_with_magic:tech",
+        "stream": true
+      }
+    ]
+  },
+  "weird_rythem": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "it_starts_with_magic:weird_rythem",
         "stream": true
       }
     ]

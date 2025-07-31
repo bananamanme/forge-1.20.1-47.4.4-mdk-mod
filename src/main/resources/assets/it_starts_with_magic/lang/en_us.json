@@ -4,6 +4,8 @@
   "item.it_starts_with_magic.the_spell_book": "The Spell Book",
   "item.it_starts_with_magic.tech_music_disc": "The Tech Some Music Disc",
   "item.it_starts_with_magic.tech_music_disc.desc": "Bananaman - Tech",
+  "item.it_starts_with_magic.weird_rythem_music_disc": "The Weird Rythem Song",
+  "item.it_starts_with_magic.weird_rythem_music_disc.desc": "Bananaman - Weird Rythem",
 
 
   "block.it_starts_with_magic.pell": "Pell",
@@ -11,5 +13,6 @@
 
 
   "creativetab.it_starts_with_magic_tab": "It Starts With Magic :)",
-  "sounds.it_starts_with_magic.tech": "The Tech Song"
+  "sounds.it_starts_with_magic.tech": "The Tech Song",
+  "sounds.it_starts_with_magic.weird_rythem": "The Weird Rythem Song"
 }
