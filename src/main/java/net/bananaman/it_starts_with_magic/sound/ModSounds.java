@@ -17,7 +17,10 @@ public class ModSounds {
             DeferredRegister.create(ForgeRegistries.SOUND_EVENTS, ItStartsWithMagicMod.MOD_ID);
 
         public static final RegistryObject<SoundEvent> TECH = registerSoundEvents("tech");
+
     public static final RegistryObject<SoundEvent> WEIRD_RYTHEM = registerSoundEvents("weird_rythem");
+
+    public static final RegistryObject<SoundEvent> RUSSSSIAN = registerSoundEvents("russssian");
 
 
     private static RegistryObject<SoundEvent> registerSoundEvents(String name) {

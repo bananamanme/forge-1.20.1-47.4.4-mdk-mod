@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "it_starts_with_magic:block/the_entity_block"
+    }
+  }
+}

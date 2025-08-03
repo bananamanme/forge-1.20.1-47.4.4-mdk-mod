@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "it_starts_with_magic:item/russssian_music_disc"
+  }
+}

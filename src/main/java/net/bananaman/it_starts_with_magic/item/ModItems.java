@@ -12,14 +12,16 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static net.bananaman.it_starts_with_magic.sound.ModSounds.TECH;
-import static net.bananaman.it_starts_with_magic.sound.ModSounds.WEIRD_RYTHEM;
+import static net.bananaman.it_starts_with_magic.sound.ModSounds.*;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ItStartsWithMagicMod.MOD_ID);
 
     public static final RegistryObject<Item> SPELLSHARD = ITEMS.register("spell_shard",
+            () -> new Item(new Item.Properties()));
+
+    public static final RegistryObject<Item> LAPIS_LAZULI_SHARD = ITEMS.register("lapis_lazuli_shard",
             () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> THESPELLBOOK = ITEMS.register("the_spell_book",
@@ -30,6 +32,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> WEIRD_RYTHEM_MUSIC_DISC = ITEMS.register("weird_rythem_music_disc",
             () -> new RecordItem(1, WEIRD_RYTHEM.get(), new Item.Properties().stacksTo(1), 285));
+
+    public static final RegistryObject<Item> RUSSSSIAN_MUSIC_DISC = ITEMS.register("russssian_music_disc",
+            () -> new RecordItem(1, RUSSSSIAN.get(), new Item.Properties().stacksTo(1), 132));
 
 
 

@@ -1,4 +1,6 @@
-// 1.20.1	2025-07-31T00:19:58.5006778	Item Models: it_starts_with_magic
+// 1.20.1	2025-08-02T20:03:50.7914289	Item Models: it_starts_with_magic
+71b8b2d05ddcf290dce78c0b1219e045e19670a5 assets/it_starts_with_magic/models/item/lapis_lazuli_shard.json
+ef44b81f4b3c753d1092ac98c1d64a265c5b84b7 assets/it_starts_with_magic/models/item/russssian_music_disc.json
 811bf646aeaacf8a0c729fe37e5ea747053cddf7 assets/it_starts_with_magic/models/item/spell_shard.json
 777de055ec57314f3ccaac2ea7d536a395645d18 assets/it_starts_with_magic/models/item/tech_music_disc.json
 943c828548d12c6023ec524ba7b1b2928435442e assets/it_starts_with_magic/models/item/the_spell_book.json

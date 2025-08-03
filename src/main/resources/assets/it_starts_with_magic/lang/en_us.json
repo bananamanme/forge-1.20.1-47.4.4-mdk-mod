@@ -2,13 +2,20 @@
   "item.it_starts_with_magic.spell_shard": "Spell Shard",
   "item.it_starts_with_magic.spell_book": "Spell Book",
   "item.it_starts_with_magic.the_spell_book": "The Spell Book",
+  "item.it_starts_with_magic.lapis_lazuli_shard": "Lapis Lazuli Shard",
+
+
+
   "item.it_starts_with_magic.tech_music_disc": "The Tech Some Music Disc",
   "item.it_starts_with_magic.tech_music_disc.desc": "Bananaman - Tech",
   "item.it_starts_with_magic.weird_rythem_music_disc": "The Weird Rythem Song",
   "item.it_starts_with_magic.weird_rythem_music_disc.desc": "Bananaman - Weird Rythem",
+  "item.it_starts_with_magic.russssian_music_disc": "The Russssian Song",
+  "item.it_starts_with_magic.russssian_music_disc.desc": "Bananaman - Russssian",
 
 
   "block.it_starts_with_magic.pell": "Pell",
+  "block.it_starts_with_magic.the_entity_block": "The Entity Block",
 
 
 

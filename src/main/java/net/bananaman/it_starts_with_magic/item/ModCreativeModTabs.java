@@ -18,10 +18,16 @@ public class ModCreativeModTabs {
                     .title(Component.translatable("creativetab.it_starts_with_magic_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.SPELLSHARD.get());
-                        output.accept(ModBlocks.PEll.get());
                         output.accept(ModItems.THESPELLBOOK.get());
                         output.accept(ModItems.TECH_MUSIC_DISC.get());
                         output.accept(ModItems.WEIRD_RYTHEM_MUSIC_DISC.get());
+                        output.accept(ModItems.RUSSSSIAN_MUSIC_DISC.get());
+                        output.accept(ModItems.LAPIS_LAZULI_SHARD.get());
+
+
+                        output.accept(ModBlocks.PEll.get());
+                        output.accept(ModBlocks.THE_ENTITY_BLOCK.get());
+
                     })
 
                     .build());

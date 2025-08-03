@@ -22,6 +22,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.THESPELLBOOK);
         simpleItem(ModItems.TECH_MUSIC_DISC);
         simpleItem(ModItems.WEIRD_RYTHEM_MUSIC_DISC);
+        simpleItem(ModItems.RUSSSSIAN_MUSIC_DISC);
+        simpleItem(ModItems.LAPIS_LAZULI_SHARD);
 
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item>item) {

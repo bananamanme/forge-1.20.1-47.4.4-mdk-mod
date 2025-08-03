@@ -1,4 +1,6 @@
-// 1.20.1	2025-07-29T23:33:41.2311522	Block States: it_starts_with_magic
+// 1.20.1	2025-08-02T20:03:50.7899305	Block States: it_starts_with_magic
 61a14704010d565175e869720638fc90607eac6e assets/it_starts_with_magic/blockstates/pell.json
+d732b3f10dc24ecd6ffe88f626ddefb045fcea4f assets/it_starts_with_magic/blockstates/the_entity_block.json
 e7944b2ea50dbf1b0123d64d7a01f7d2786df2ec assets/it_starts_with_magic/models/block/pell.json
 9705b337f631b0484efc9c27e2f0fbbea4c3c6dd assets/it_starts_with_magic/models/item/pell.json
+9ed86d9c1e9289076538aeca28c4259d48f8672e assets/it_starts_with_magic/models/item/the_entity_block.json

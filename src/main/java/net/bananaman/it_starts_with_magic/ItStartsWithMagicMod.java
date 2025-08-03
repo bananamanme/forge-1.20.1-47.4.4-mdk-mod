@@ -3,11 +3,16 @@ package net.bananaman.it_starts_with_magic;
 
 import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
+import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.particle.ModSonicBoomParticle;
+import net.bananaman.it_starts_with_magic.recipe.ModRecipes;
+import net.bananaman.it_starts_with_magic.screen.ModMenuTypes;
+import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.particle.SonicBoomParticle;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
@@ -41,6 +46,9 @@ public class ItStartsWithMagicMod
         ModCreativeModTabs.register(modEventBus);
         ModParticles.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModBlocksEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
+        ModRecipes.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -71,6 +79,7 @@ public class ItStartsWithMagicMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
+            MenuScreens.register(ModMenuTypes.THE_ENTITY_BLOCK_MENU.get(), TheEntityBlockScreen::new);
         }
 
         @SubscribeEvent

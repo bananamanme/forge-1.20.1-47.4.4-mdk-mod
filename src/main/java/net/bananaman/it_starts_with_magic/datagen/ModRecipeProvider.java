@@ -43,9 +43,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SPELLSHARD.get()),has(ModItems.SPELLSHARD.get()))
                 .save(consumer);
 
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.SPELLSHARD.get(), 9)
                 .requires(ModBlocks.PEll.get())
                 .unlockedBy(getHasName(ModBlocks.PEll.get()),has(ModBlocks.PEll.get()))
+                .save(consumer);
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.LAPIS_LAZULI_SHARD.get())
+                .requires(Items.LAPIS_LAZULI,2)
+                .requires(Items.GOLD_NUGGET,2)
+                .unlockedBy(getHasName(Items.LAPIS_LAZULI),has(Items.LAPIS_LAZULI))
+                .unlockedBy(getHasName(Items.GOLD_NUGGET),has(Items.GOLD_NUGGET))
                 .save(consumer);
 
     }

@@ -22,7 +22,8 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
         this.tag(ItemTags.MUSIC_DISCS)
                 .add(ModItems.TECH_MUSIC_DISC.get(),
-                        ModItems.WEIRD_RYTHEM_MUSIC_DISC.get());
+                        ModItems.WEIRD_RYTHEM_MUSIC_DISC.get(),
+                        ModItems.RUSSSSIAN_MUSIC_DISC.get());
 
 
 

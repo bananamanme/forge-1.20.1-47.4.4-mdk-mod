@@ -18,6 +18,7 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.PEll.get());
+        this.dropSelf(ModBlocks.THE_ENTITY_BLOCK.get());
 
     }
 

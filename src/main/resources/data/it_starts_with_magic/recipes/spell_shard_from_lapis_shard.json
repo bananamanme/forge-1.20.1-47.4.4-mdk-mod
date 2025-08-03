@@ -1,0 +1,12 @@
+{
+  "type": "it_starts_with_magic:infusing",
+  "ingredients": [
+    {
+      "item": "it_starts_with_magic:lapis_lazuli_shard"
+    }
+  ],
+  "output": {
+    "count": 1,
+    "item": "it_starts_with_magic:spell_shard"
+  }
+}

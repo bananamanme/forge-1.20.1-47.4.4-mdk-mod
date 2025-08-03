@@ -16,5 +16,14 @@
         "stream": true
       }
     ]
+  },
+  "russssian": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "it_starts_with_magic:russssian",
+        "stream": true
+      }
+    ]
   }
 }

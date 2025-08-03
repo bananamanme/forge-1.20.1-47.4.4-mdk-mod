@@ -1,7 +1,9 @@
-// 1.20.1	2025-07-29T23:44:09.4771749	Recipes
+// 1.20.1	2025-08-02T20:03:50.7929453	Recipes
+4dc2b413366a0dc8e10b4e8ef47a280e1725ea47 data/it_starts_with_magic/advancements/recipes/misc/lapis_lazuli_shard.json
 c935576c544e32cf1b878255dd962effbc4a3a21 data/it_starts_with_magic/advancements/recipes/misc/pell.json
 a959ceca32c9c496e12580ffeead3184b679ff34 data/it_starts_with_magic/advancements/recipes/misc/spell_shard.json
 ee946f455b267dd621f202d372242c8bffc3f56f data/it_starts_with_magic/advancements/recipes/misc/the_spell_book.json
+f869abd1d5a2b6e3f920732bd7e708b3ebcbaccb data/it_starts_with_magic/recipes/lapis_lazuli_shard.json
 b72bcd34c0857f136d815d3c201e60029f7cbfaf data/it_starts_with_magic/recipes/pell.json
 95b62e50992d0aa5025f087a95dccf5cb2c3d63d data/it_starts_with_magic/recipes/spell_shard.json
 1808f0872fac0db3326ffae2afd0faa14bae81c8 data/it_starts_with_magic/recipes/the_spell_book.json
