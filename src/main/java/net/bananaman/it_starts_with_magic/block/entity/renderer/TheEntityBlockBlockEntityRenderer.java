@@ -35,10 +35,14 @@ public class TheEntityBlockBlockEntityRenderer implements BlockEntityRenderer<Th
         ItemRenderer itemRenderer = Minecraft.getInstance().getItemRenderer();
         ItemStack itemStack = pBlockEntity.getRenderStack();
 
+        long gameTime = pBlockEntity.getLevel().getGameTime();
+        float rotationAngle = (gameTime + pPartialTick) * 3.0f;
+
         pPoseStack.pushPose();
-        pPoseStack.translate(0.5f,0.5f,0.5f);
-        pPoseStack.scale(0.4f,0.5f,0.4f);
-        pPoseStack.mulPose(Axis.XP.rotationDegrees(270));
+        pPoseStack.translate(0.5f,0.6f,0.5f);
+        pPoseStack.scale(0.5f,0.5f,0.5f);
+        pPoseStack.mulPose(Axis.YP.rotationDegrees(rotationAngle)); // Rotate around the Y-axis
+        pPoseStack.mulPose(Axis.XP.rotationDegrees(90));
 
 
 

@@ -165,10 +165,10 @@ public class TheEntityBlockBlockEntity extends BlockEntity implements MenuProvid
 
     }
 
-    public static void itemRotator(){
-        PoseStack pPoseStack;
-        pPoseStack.scale(0.4f,itemAngle,0.4f);
-    }
+//    public static void itemRotator(){
+//        PoseStack pPoseStack;
+//        pPoseStack.scale(0.4f,itemAngle,0.4f);
+//    }
 
 
     private void resetProgress() {
