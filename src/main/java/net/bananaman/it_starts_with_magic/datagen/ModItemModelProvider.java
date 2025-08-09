@@ -24,6 +24,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.WEIRD_RYTHEM_MUSIC_DISC);
         simpleItem(ModItems.RUSSSSIAN_MUSIC_DISC);
         simpleItem(ModItems.LAPIS_LAZULI_SHARD);
+        simpleItem(ModItems.RUBY);
+
 
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item>item) {

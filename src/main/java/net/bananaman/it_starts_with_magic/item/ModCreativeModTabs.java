@@ -23,10 +23,14 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.WEIRD_RYTHEM_MUSIC_DISC.get());
                         output.accept(ModItems.RUSSSSIAN_MUSIC_DISC.get());
                         output.accept(ModItems.LAPIS_LAZULI_SHARD.get());
+                        output.accept(ModItems.RUBY.get());
+
 
 
                         output.accept(ModBlocks.PEll.get());
                         output.accept(ModBlocks.THE_ENTITY_BLOCK.get());
+                        output.accept(ModBlocks.RUBY_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
 
                     })
 

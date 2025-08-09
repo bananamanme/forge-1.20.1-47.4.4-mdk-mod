@@ -8,6 +8,7 @@ import net.minecraft.tags.BlockTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -20,10 +21,16 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
     @Override
     protected void addTags(HolderLookup.Provider provider) {
         this.tag(BlockTags.NEEDS_IRON_TOOL)
-                .add(ModBlocks.PEll.get());
+                .add(ModBlocks.PEll.get(),
+                        ModBlocks.RUBY_ORE.get(),
+                        ModBlocks.DEEPSLATE_RUBY_ORE.get()
+                );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
-                .add(ModBlocks.PEll.get());
+                .add(ModBlocks.PEll.get(),
+                        ModBlocks.RUBY_ORE.get(),
+                        ModBlocks.DEEPSLATE_RUBY_ORE.get()
+                );
 
     }
 }

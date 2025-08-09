@@ -3,6 +3,8 @@
   "item.it_starts_with_magic.spell_book": "Spell Book",
   "item.it_starts_with_magic.the_spell_book": "The Spell Book",
   "item.it_starts_with_magic.lapis_lazuli_shard": "Lapis Lazuli Shard",
+  "item.it_starts_with_magic.ruby": "Ruby",
+
 
 
 
@@ -16,6 +18,8 @@
 
   "block.it_starts_with_magic.pell": "Pell",
   "block.it_starts_with_magic.the_entity_block": "The Entity Block",
+  "block.it_starts_with_magic.ruby_ore": "Ruby Ore",
+  "block.it_starts_with_magic.deepslate_ruby_ore": "Deepslate Ruby Ore",
 
 
 

@@ -1,3 +1,5 @@
-// 1.20.1	2025-08-02T16:58:25.0966218	Loot Tables
+// 1.20.1	2025-08-09T15:14:07.6774826	Loot Tables
+6d44d34755879208f0f4b3198fd082954a49c359 data/it_starts_with_magic/loot_tables/blocks/deepslate_ruby_ore.json
 886fcb3ed15e96e462cbc674333fcd0ba5eeb2cb data/it_starts_with_magic/loot_tables/blocks/pell.json
+d53707c556a422880b8c7262cc5c4481f4b612a3 data/it_starts_with_magic/loot_tables/blocks/ruby_ore.json
 229011b1d3acdd4247d4bee48601a87b17d4d005 data/it_starts_with_magic/loot_tables/blocks/the_entity_block.json

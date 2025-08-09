@@ -21,6 +21,9 @@ public class ModItems {
     public static final RegistryObject<Item> SPELLSHARD = ITEMS.register("spell_shard",
             () -> new Item(new Item.Properties()));
 
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
+            () -> new Item(new Item.Properties()));
+
     public static final RegistryObject<Item> LAPIS_LAZULI_SHARD = ITEMS.register("lapis_lazuli_shard",
             () -> new Item(new Item.Properties()));
 

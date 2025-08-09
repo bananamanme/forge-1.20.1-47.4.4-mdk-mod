@@ -160,8 +160,6 @@ public class TheEntityBlockBlockEntity extends BlockEntity implements MenuProvid
         }else {
             resetProgress();
         }
-        itemAngle+=1f;
-        System.out.println(itemAngle);;
 
     }
 

@@ -1,0 +1,4 @@
+// 1.20.1	2025-08-09T15:14:07.6795095	Registries
+138fd11cc8d0fbe78db84ef1650a83c07c007de9 data/it_starts_with_magic/forge/biome_modifier/add_ruby_ore.json
+ec45b8ae4feb269a6a5f2a83ef075fb5ffe94abc data/it_starts_with_magic/worldgen/configured_feature/ruby_ore.json
+6cb593c0df5959afe6925bb39b9ba30938e24d21 data/it_starts_with_magic/worldgen/placed_feature/ruby_ore_placed.json

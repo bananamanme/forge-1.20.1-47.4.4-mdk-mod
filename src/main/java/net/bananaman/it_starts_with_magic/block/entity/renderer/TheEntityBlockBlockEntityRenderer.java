@@ -3,6 +3,7 @@ package net.bananaman.it_starts_with_magic.block.entity.renderer;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.math.Axis;
 import net.bananaman.it_starts_with_magic.block.entity.TheEntityBlockBlockEntity;
+import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.LightTexture;
 import net.minecraft.client.renderer.MultiBufferSource;
@@ -18,13 +19,12 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LightLayer;
 import org.joml.Quaternionf;
+import org.joml.Random;
 
 public class TheEntityBlockBlockEntityRenderer implements BlockEntityRenderer<TheEntityBlockBlockEntity> {
     public TheEntityBlockBlockEntityRenderer(BlockEntityRendererProvider.Context context) {
 
     }
-    float itemAngle = 0.0f;
-
 
 
 
@@ -47,9 +47,30 @@ public class TheEntityBlockBlockEntityRenderer implements BlockEntityRenderer<Th
 
 
 
+
         itemRenderer.renderStatic(itemStack, ItemDisplayContext.FIXED, getLightLevel(pBlockEntity.getLevel(),pBlockEntity.getBlockPos()),
                 OverlayTexture.NO_OVERLAY,pPoseStack, pBuffer, pBlockEntity.getLevel(),1);
         pPoseStack.popPose();
+
+
+
+        // Spawn a particle
+        Level level = pBlockEntity.getLevel();
+        BlockPos pos = pBlockEntity.getBlockPos();
+        Random random = new Random();
+
+//        if (level != null && random.nextFloat() < 0.1f) { // Adjust the float value to control particle frequency
+//            double x = pos.getX() + 0.5D;
+//            double y = pos.getY() + 0.5D;
+//            double z = pos.getZ() + 0.5D;
+//
+//            // Example: Spawning a "WITCH" particle
+//            // You can choose any particle type from net.minecraft.core.particles.ParticleTypes
+//            level.addParticle(ModParticles.MODSONICBOOMPARTICLE.get(), x, y, z,
+//                    (random.nextFloat() - 0.5D) * 0.2D,
+//                    (random.nextFloat() - 0.5D) * 0.2D,
+//                    (random.nextFloat() - 0.5D) * 0.2D);
+//        }
 
 
     }
@@ -59,4 +80,8 @@ public class TheEntityBlockBlockEntityRenderer implements BlockEntityRenderer<Th
         int sLight = level.getBrightness(LightLayer.SKY, pos);
         return LightTexture.pack(bLight,sLight);
     }
+
+
+
+
 }

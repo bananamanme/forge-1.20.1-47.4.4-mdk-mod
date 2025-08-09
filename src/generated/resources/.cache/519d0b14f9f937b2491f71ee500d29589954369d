@@ -1,6 +1,12 @@
-// 1.20.1	2025-08-02T20:03:50.7899305	Block States: it_starts_with_magic
+// 1.20.1	2025-08-09T15:14:07.6754422	Block States: it_starts_with_magic
+28e480bda76852aa24122f32a44ca2593d807a32 assets/it_starts_with_magic/blockstates/deepslate_ruby_ore.json
 61a14704010d565175e869720638fc90607eac6e assets/it_starts_with_magic/blockstates/pell.json
+ce4b2c79e00e211ed79b863370bb50f5880783dd assets/it_starts_with_magic/blockstates/ruby_ore.json
 d732b3f10dc24ecd6ffe88f626ddefb045fcea4f assets/it_starts_with_magic/blockstates/the_entity_block.json
+06f7d1693aad3a0e16c932438cb66622ed00ccb9 assets/it_starts_with_magic/models/block/deepslate_ruby_ore.json
 e7944b2ea50dbf1b0123d64d7a01f7d2786df2ec assets/it_starts_with_magic/models/block/pell.json
+48ca56bf998a030401c4f6a1962ee99861428ef3 assets/it_starts_with_magic/models/block/ruby_ore.json
+66e820f26b0c090f9db3b56b1c9381aff3e56fba assets/it_starts_with_magic/models/item/deepslate_ruby_ore.json
 9705b337f631b0484efc9c27e2f0fbbea4c3c6dd assets/it_starts_with_magic/models/item/pell.json
+a09a7894323a6814c78efef8e7f19101f1eac513 assets/it_starts_with_magic/models/item/ruby_ore.json
 9ed86d9c1e9289076538aeca28c4259d48f8672e assets/it_starts_with_magic/models/item/the_entity_block.json
