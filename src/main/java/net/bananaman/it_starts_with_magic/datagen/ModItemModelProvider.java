@@ -28,6 +28,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.AMETRINE);
 
 
+
     }
     private ItemModelBuilder simpleItem(RegistryObject<Item>item) {
         return withExistingParent(item.getId().getPath(),
