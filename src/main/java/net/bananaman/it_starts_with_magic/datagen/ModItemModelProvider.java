@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUSSSSIAN_MUSIC_DISC);
         simpleItem(ModItems.LAPIS_LAZULI_SHARD);
         simpleItem(ModItems.RUBY);
+        simpleItem(ModItems.AMETRINE);
 
 
     }

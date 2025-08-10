@@ -24,6 +24,7 @@ public class ModCreativeModTabs {
                         output.accept(ModItems.RUSSSSIAN_MUSIC_DISC.get());
                         output.accept(ModItems.LAPIS_LAZULI_SHARD.get());
                         output.accept(ModItems.RUBY.get());
+                        output.accept(ModItems.AMETRINE.get());
 
 
 
