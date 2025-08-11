@@ -23,13 +23,19 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
         this.tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.PEll.get(),
                         ModBlocks.RUBY_ORE.get(),
-                        ModBlocks.DEEPSLATE_RUBY_ORE.get()
+                        ModBlocks.DEEPSLATE_RUBY_ORE.get(),
+                        ModBlocks.RUBY_BLOCK.get(),
+                        ModBlocks.AMETRINE_ORE.get(),
+                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.PEll.get(),
                         ModBlocks.RUBY_ORE.get(),
-                        ModBlocks.DEEPSLATE_RUBY_ORE.get()
+                        ModBlocks.DEEPSLATE_RUBY_ORE.get(),
+                        ModBlocks.RUBY_BLOCK.get(),
+                        ModBlocks.AMETRINE_ORE.get(),
+                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get()
                 );
 
     }

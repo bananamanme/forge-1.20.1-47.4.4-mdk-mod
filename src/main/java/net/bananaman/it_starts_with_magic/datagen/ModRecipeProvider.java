@@ -43,6 +43,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.SPELLSHARD.get()),has(ModItems.SPELLSHARD.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.RUBY_BLOCK.get())
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', ModItems.RUBY.get())
+                .unlockedBy(getHasName(ModItems.RUBY.get()),has(ModItems.RUBY.get()))
+                .save(consumer);
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.SPELLSHARD.get(), 9)
                 .requires(ModBlocks.PEll.get())
@@ -56,6 +63,10 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(Items.GOLD_NUGGET),has(Items.GOLD_NUGGET))
                 .save(consumer);
 
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.RUBY.get(), 9)
+                .requires(ModBlocks.RUBY_BLOCK.get())
+                .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get()))
+                .save(consumer);
     }
 
 

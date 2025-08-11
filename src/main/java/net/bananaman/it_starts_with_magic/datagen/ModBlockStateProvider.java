@@ -19,6 +19,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.PEll);
         blockWithItem(ModBlocks.RUBY_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_RUBY_ORE);
+        blockWithItem(ModBlocks.RUBY_BLOCK);
+        blockWithItem(ModBlocks.AMETRINE_ORE);
+        blockWithItem(ModBlocks.DEEPSLATE_AMETRINE_ORE);
 
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));
