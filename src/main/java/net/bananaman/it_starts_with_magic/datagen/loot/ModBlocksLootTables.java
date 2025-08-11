@@ -27,12 +27,16 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
     protected void generate() {
         this.dropSelf(ModBlocks.PEll.get());
         this.dropSelf(ModBlocks.THE_ENTITY_BLOCK.get());
+        this.dropSelf(ModBlocks.RUBY_BLOCK.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createModOreDrop(ModBlocks.RUBY_ORE.get(),ModItems.RUBY.get()));
         this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                 block -> createModOreDrop(ModBlocks.DEEPSLATE_RUBY_ORE.get(),ModItems.RUBY.get()));
-
+        this.add(ModBlocks.AMETRINE_ORE.get(),
+                block -> createModOreDrop(ModBlocks.AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
+        this.add(ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
+                block -> createModOreDrop(ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
     }
 
 
