@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "it_starts_with_magic:emeralder",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 4356715564,
+
+    "spacing": 20,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
