@@ -17,6 +17,7 @@ public class ModCreativeModTabs {
             ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.THESPELLBOOK.get()))
                     .title(Component.translatable("creativetab.it_starts_with_magic_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
+
                         output.accept(ModItems.SPELLSHARD.get());
                         output.accept(ModItems.THESPELLBOOK.get());
                         output.accept(ModItems.TECH_MUSIC_DISC.get());
