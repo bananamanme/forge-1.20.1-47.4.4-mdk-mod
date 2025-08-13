@@ -42,6 +42,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> DEEPSLATE_AMETRINE_ORE = registerBlock("deepslate_ametrine_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
 
+    public static final RegistryObject<Block> AZURITE_ORE = registerBlock("azurite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+
+    public static final RegistryObject<Block> DEEPSLATE_AZURITE_ORE = registerBlock("deepslate_azurite_ore",
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(8).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);

@@ -5,6 +5,8 @@
     "it_starts_with_magic:deepslate_ruby_ore",
     "it_starts_with_magic:ruby_block",
     "it_starts_with_magic:ametrine_ore",
-    "it_starts_with_magic:deepslate_ametrine_ore"
+    "it_starts_with_magic:deepslate_ametrine_ore",
+    "it_starts_with_magic:azurite_ore",
+    "it_starts_with_magic:deepslate_azurite_ore"
   ]
 }
