@@ -36,6 +36,8 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.RUBY_BLOCK.get());
                         output.accept(ModBlocks.AMETRINE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_AMETRINE_ORE.get());
+                        output.accept(ModBlocks.AZURITE_ORE.get());
+                        output.accept(ModBlocks.DEEPSLATE_AZURITE_ORE.get());
 
                     })
 

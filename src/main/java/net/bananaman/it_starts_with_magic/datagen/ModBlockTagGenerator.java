@@ -26,7 +26,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.AMETRINE_ORE.get(),
-                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get()
+                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
+                        ModBlocks.AZURITE_ORE.get(),
+                        ModBlocks.DEEPSLATE_AZURITE_ORE.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -35,7 +37,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_RUBY_ORE.get(),
                         ModBlocks.RUBY_BLOCK.get(),
                         ModBlocks.AMETRINE_ORE.get(),
-                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get()
+                        ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
+                        ModBlocks.AZURITE_ORE.get(),
+                        ModBlocks.DEEPSLATE_AZURITE_ORE.get()
                 );
 
     }

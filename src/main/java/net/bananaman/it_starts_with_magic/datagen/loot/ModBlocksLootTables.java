@@ -30,22 +30,48 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
-                block -> createModOreDrop(ModBlocks.RUBY_ORE.get(),ModItems.RUBY.get()));
+                block -> createRubyOreDrop(ModBlocks.RUBY_ORE.get(),ModItems.RUBY.get()));
         this.add(ModBlocks.DEEPSLATE_RUBY_ORE.get(),
-                block -> createModOreDrop(ModBlocks.DEEPSLATE_RUBY_ORE.get(),ModItems.RUBY.get()));
+                block -> createRubyOreDrop(ModBlocks.DEEPSLATE_RUBY_ORE.get(),ModItems.RUBY.get()));
         this.add(ModBlocks.AMETRINE_ORE.get(),
-                block -> createModOreDrop(ModBlocks.AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
+                block -> createAmetrineOreDrop(ModBlocks.AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
         this.add(ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
-                block -> createModOreDrop(ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
+                block -> createAmetrineOreDrop(ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),ModItems.AMETRINE.get()));
+        this.add(ModBlocks.AZURITE_ORE.get(),
+                block -> createAzuriteOreDrop(ModBlocks.AZURITE_ORE.get(),ModItems.LAPIS_LAZULI_SHARD.get()));
+        this.add(ModBlocks.DEEPSLATE_AZURITE_ORE.get(),
+                block -> createAzuriteOreDrop(ModBlocks.DEEPSLATE_AZURITE_ORE.get(),ModItems.LAPIS_LAZULI_SHARD.get()));
     }
 
 
-    protected LootTable.Builder createModOreDrop(Block pBlock, Item item) {
+    protected LootTable.Builder createRubyOreDrop(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionCondition(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0f,5.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+
+
+    }
+
+    protected LootTable.Builder createAmetrineOreDrop(Block pBlock, Item item) {
         return createSilkTouchDispatchTable(pBlock,
                 this.applyExplosionCondition(pBlock,
                         LootItem.lootTableItem(item)
                                 .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0f,3.0f)))
                                 .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+
+
+    }
+
+    protected LootTable.Builder createAzuriteOreDrop(Block pBlock, Item item) {
+        return createSilkTouchDispatchTable(pBlock,
+                this.applyExplosionCondition(pBlock,
+                        LootItem.lootTableItem(item)
+                                .apply(SetItemCountFunction.setCount(UniformGenerator.between(2.0f,4.0f)))
+                                .apply(ApplyBonusCount.addOreBonusCount(Enchantments.BLOCK_FORTUNE))));
+
+
     }
 
     @Override

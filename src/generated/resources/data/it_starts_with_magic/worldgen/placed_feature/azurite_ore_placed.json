@@ -1,9 +1,9 @@
 {
-  "feature": "it_starts_with_magic:ruby_ore",
+  "feature": "it_starts_with_magic:azurite_ore",
   "placement": [
     {
       "type": "minecraft:count",
-      "count": 6
+      "count": 8
     },
     {
       "type": "minecraft:in_square"

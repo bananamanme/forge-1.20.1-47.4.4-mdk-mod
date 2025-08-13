@@ -22,6 +22,7 @@ public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> RUBY_ORE_KEY = registerKey("ruby_ore");
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMETRINE_ORE_KEY = registerKey("ametrine_ore");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AZURITE_ORE_KEY = registerKey("azurite_ore");
 
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
@@ -36,9 +37,15 @@ public class ModConfiguredFeatures {
                 OreConfiguration.target(stoneReplaceable, ModBlocks.AMETRINE_ORE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_AMETRINE_ORE.get().defaultBlockState()));
 
+        List<OreConfiguration.TargetBlockState> azuriteOres = List.of(
+                OreConfiguration.target(stoneReplaceable, ModBlocks.AZURITE_ORE.get().defaultBlockState()),
+                OreConfiguration.target(deepslateReplaceable, ModBlocks.DEEPSLATE_AZURITE_ORE.get().defaultBlockState()));
+
         register(context, RUBY_ORE_KEY, Feature.ORE, new OreConfiguration(rubyOres,6));
 
         register(context, AMETRINE_ORE_KEY, Feature.ORE, new OreConfiguration(ametrineOres,6));
+
+        register(context, AZURITE_ORE_KEY, Feature.ORE, new OreConfiguration(azuriteOres,6));
     }
 
 
