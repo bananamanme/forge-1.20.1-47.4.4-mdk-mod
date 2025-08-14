@@ -1,13 +1,13 @@
 {
   "type": "minecraft:jigsaw",
 
-  "start_pool": "it_starts_with_magic:emeralder/start_pool",
+  "start_pool": "it_starts_with_magic:start_pool/emeralder",
 
   "size": 2,
 
   "max_distance_from_center": 80,
 
-  "biomes": "#it_starts_with_magic:has_structure/emeralder",
+  "biomes": "#it_starts_with_magic:has_structure/overworld",
 
   "step": "surface_structures",
 
@@ -24,10 +24,10 @@
       "bounding_box": "piece",
       "spawns": [
         {
-          "type": "minecraft:parrot",
+          "type": "minecraft:empty",
           "weight": 1,
           "minCount": 1,
-          "maxCount": 4
+          "maxCount": 1
         }
       ]
     }
