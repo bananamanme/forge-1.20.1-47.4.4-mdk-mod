@@ -6,6 +6,7 @@ import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
+import net.bananaman.it_starts_with_magic.loot.ModLootModifiers;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.particle.ModSonicBoomParticle;
 import net.bananaman.it_starts_with_magic.recipe.ModRecipes;
@@ -49,6 +50,7 @@ public class ItStartsWithMagicMod
         ModBlocksEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);

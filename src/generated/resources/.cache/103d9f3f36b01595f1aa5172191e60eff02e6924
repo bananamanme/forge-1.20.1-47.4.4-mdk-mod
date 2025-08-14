@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// 1.20.1	2025-08-13T01:14:12.1962207	Registries
-=======
-// 1.20.1	2025-08-13T20:26:40.9053423	Registries
->>>>>>> cb3128f7df6f4a9bbb9040543f7b02e7e65bb5d2
+// 1.20.1	2025-08-15T00:00:54.1468159	Registries
 a0264c1919280946bc4caa261fb6e99f6188c18d data/it_starts_with_magic/forge/biome_modifier/add_ametrine_ore.json
 89c897c3d0f32301809abadc988fcfc44e0b5799 data/it_starts_with_magic/forge/biome_modifier/add_azurite_ore.json
 138fd11cc8d0fbe78db84ef1650a83c07c007de9 data/it_starts_with_magic/forge/biome_modifier/add_ruby_ore.json

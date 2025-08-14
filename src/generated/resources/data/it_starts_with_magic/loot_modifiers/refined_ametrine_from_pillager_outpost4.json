@@ -1,0 +1,14 @@
+{
+  "type": "it_starts_with_magic:add_item",
+  "conditions": [
+    {
+      "condition": "forge:loot_table_id",
+      "loot_table_id": "minecraft:chests/pillager_outpost"
+    },
+    {
+      "chance": 0.5,
+      "condition": "minecraft:random_chance"
+    }
+  ],
+  "item": "it_starts_with_magic:spell_shard"
+}
