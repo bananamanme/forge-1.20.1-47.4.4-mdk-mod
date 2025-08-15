@@ -67,6 +67,17 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.RUBY_BLOCK.get())
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get()))
                 .save(consumer);
+
+        stonecutterRecipes(consumer, ModBlocks.PEll.get(), ModItems.SPELLSHARD.get());
+
+
+
+    }
+
+    protected void stonecutterRecipes(Consumer<FinishedRecipe> consumer, ItemLike output, ItemLike input) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.MISC, output)
+                .unlockedBy(getHasName(input), has(input))
+                .save(consumer, "it_starts_with_magic:" + getItemName(output) + "_from_stonecutting_" + getItemName(input));
     }
 
 

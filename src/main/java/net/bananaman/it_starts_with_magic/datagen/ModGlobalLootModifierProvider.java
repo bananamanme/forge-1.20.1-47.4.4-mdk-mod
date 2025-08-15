@@ -62,6 +62,5 @@ public class ModGlobalLootModifierProvider extends GlobalLootModifierProvider {
             }, ModItems.SPELLSHARD.get()));
         }
 
-
     }
 }
