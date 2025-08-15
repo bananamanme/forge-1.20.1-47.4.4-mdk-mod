@@ -4,10 +4,7 @@ import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
-import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -30,16 +27,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_AZURITE_ORE);
         blockWithItem(ModBlocks.CHISELED_TUFF);
         blockWithItem(ModBlocks.TUFF_BRICKS);
+        blockWithItem(ModBlocks.CHISELED_TUFF_BRICKS);
+        blockWithItem(ModBlocks.POLISHED_TUFF);
 
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));
 
 
         stairsBlock(((StairBlock) ModBlocks.PEll_STAIRS.get()), blockTexture(ModBlocks.PEll.get()));
+        stairsBlock(((StairBlock) ModBlocks.TUFF_STAIRS.get()), blockTexture(Blocks.TUFF));
+        stairsBlock(((StairBlock) ModBlocks.TUFF_BRICK_STAIRS.get()), blockTexture(ModBlocks.TUFF_BRICKS.get()));
+        stairsBlock(((StairBlock) ModBlocks.POLISHED_TUFF_STAIRS.get()), blockTexture(ModBlocks.POLISHED_TUFF.get()));
 
         slabBlock((SlabBlock) ModBlocks.PEll_SLAB.get(), blockTexture(ModBlocks.PEll.get()), blockTexture(ModBlocks.PEll.get()));
+        slabBlock((SlabBlock) ModBlocks.TUFF_SLAB.get(), blockTexture(Blocks.TUFF), blockTexture(Blocks.TUFF));
+        slabBlock((SlabBlock) ModBlocks.TUFF_BRICK_SLAB.get(), blockTexture(ModBlocks.TUFF_BRICKS.get()), blockTexture(ModBlocks.TUFF_BRICKS.get()));
+        slabBlock((SlabBlock) ModBlocks.POLISHED_TUFF_SLAB.get(), blockTexture(ModBlocks.POLISHED_TUFF.get()), blockTexture(ModBlocks.POLISHED_TUFF.get()));
 
         wallBlock(((WallBlock) ModBlocks.PEll_WALL.get()), blockTexture(ModBlocks.PEll.get()));
+        wallBlock(((WallBlock) ModBlocks.TUFF_WALL.get()), blockTexture(Blocks.TUFF));
+        wallBlock(((WallBlock) ModBlocks.TUFF_BRICK_WALL.get()), blockTexture(ModBlocks.TUFF_BRICKS.get()));
+        wallBlock(((WallBlock) ModBlocks.POLISHED_TUFF_WALL.get()), blockTexture(ModBlocks.POLISHED_TUFF.get()));
 
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

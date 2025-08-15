@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "it_starts_with_magic:block/tuff_bricks",
+    "side": "it_starts_with_magic:block/tuff_bricks",
+    "top": "it_starts_with_magic:block/tuff_bricks"
+  }
+}

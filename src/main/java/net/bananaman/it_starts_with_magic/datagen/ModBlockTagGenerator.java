@@ -40,12 +40,24 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
                         ModBlocks.AZURITE_ORE.get(),
                         ModBlocks.DEEPSLATE_AZURITE_ORE.get(),
+                        ModBlocks.TUFF_SLAB.get(),
+                        ModBlocks.TUFF_STAIRS.get(),
                         ModBlocks.CHISELED_TUFF.get(),
-                        ModBlocks.TUFF_BRICKS.get()
+                        ModBlocks.TUFF_BRICKS.get(),
+                        ModBlocks.TUFF_BRICK_SLAB.get(),
+                        ModBlocks.TUFF_BRICK_STAIRS.get(),
+                        ModBlocks.CHISELED_TUFF_BRICKS.get(),
+                        ModBlocks.POLISHED_TUFF.get(),
+                        ModBlocks.POLISHED_TUFF_SLAB.get(),
+                        ModBlocks.POLISHED_TUFF_STAIRS.get()
                 );
 
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.PEll_WALL.get()
+                .add(ModBlocks.PEll_WALL.get())
+                .add(ModBlocks.TUFF_WALL.get())
+                .add(ModBlocks.TUFF_BRICK_WALL.get())
+                .add(ModBlocks.POLISHED_TUFF_WALL.get()
+
 
 
                 );

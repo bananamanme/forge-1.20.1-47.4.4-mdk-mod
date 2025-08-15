@@ -8,6 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -31,9 +32,17 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.AMETRINE);
 
         wallItem(ModBlocks.PEll_WALL,ModBlocks.PEll);
+        wallItem(ModBlocks.TUFF_BRICK_WALL,ModBlocks.TUFF_BRICKS);
+        wallItem(ModBlocks.POLISHED_TUFF_WALL,ModBlocks.POLISHED_TUFF);
 
         evenSimplerBlockItem(ModBlocks.PEll_STAIRS);
         evenSimplerBlockItem(ModBlocks.PEll_SLAB);
+        evenSimplerBlockItem(ModBlocks.TUFF_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TUFF_SLAB);
+        evenSimplerBlockItem(ModBlocks.TUFF_BRICK_STAIRS);
+        evenSimplerBlockItem(ModBlocks.TUFF_BRICK_SLAB);
+        evenSimplerBlockItem(ModBlocks.POLISHED_TUFF_STAIRS);
+        evenSimplerBlockItem(ModBlocks.POLISHED_TUFF_SLAB);
 
 
 
@@ -53,4 +62,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         this.withExistingParent(ItStartsWithMagicMod.MOD_ID+ ":" +ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
                 modLoc("block/"+ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
+
+
 }

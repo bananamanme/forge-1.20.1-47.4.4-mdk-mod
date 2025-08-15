@@ -35,31 +35,68 @@ public class ModBlocks {
             () -> new TheEntityBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).sound(SoundType.AMETHYST).strength(6).requiresCorrectToolForDrops().noOcclusion()));
 
     public static final RegistryObject<Block> RUBY_ORE = registerBlock("ruby_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static final RegistryObject<Block> DEEPSLATE_RUBY_ORE = registerBlock("deepslate_ruby_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static final RegistryObject<Block> RUBY_BLOCK = registerBlock("ruby_block",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.EMERALD_BLOCK).strength(8).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> AMETRINE_ORE = registerBlock("ametrine_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static final RegistryObject<Block> DEEPSLATE_AMETRINE_ORE = registerBlock("deepslate_ametrine_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static final RegistryObject<Block> AZURITE_ORE = registerBlock("azurite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.STONE).strength(6).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
 
     public static final RegistryObject<Block> DEEPSLATE_AZURITE_ORE = registerBlock("deepslate_azurite_ore",
-            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops().noOcclusion(), UniformInt.of(3,6)));
+            () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE).strength(8).requiresCorrectToolForDrops(), UniformInt.of(3,6)));
+
+    public static final RegistryObject<Block> TUFF_SLAB = registerBlock("tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_WALL = registerBlock("tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_STAIRS = registerBlock("tuff_stairs",
+            () -> new StairBlock(() -> Blocks.TUFF.defaultBlockState(),
+                    BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CHISELED_TUFF = registerBlock("chiseled_tuff",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops().noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> TUFF_BRICKS = registerBlock("tuff_bricks",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops().noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICK_SLAB = registerBlock("tuff_brick_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.TUFF_BRICKS.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICK_WALL = registerBlock("tuff_brick_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.TUFF_BRICKS.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> TUFF_BRICK_STAIRS = registerBlock("tuff_brick_stairs",
+            () -> new StairBlock(() -> ModBlocks.TUFF_BRICKS.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(ModBlocks.TUFF_BRICKS.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> CHISELED_TUFF_BRICKS = registerBlock("chiseled_tuff_bricks",
+            () -> new Block(BlockBehaviour.Properties.copy(ModBlocks.TUFF_BRICKS.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF = registerBlock("polished_tuff",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.TUFF).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_SLAB = registerBlock("polished_tuff_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(ModBlocks.POLISHED_TUFF.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_WALL = registerBlock("polished_tuff_wall",
+            () -> new WallBlock(BlockBehaviour.Properties.copy(ModBlocks.POLISHED_TUFF.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> POLISHED_TUFF_STAIRS = registerBlock("polished_tuff_stairs",
+            () -> new StairBlock(() -> ModBlocks.POLISHED_TUFF.get().defaultBlockState(),
+                    BlockBehaviour.Properties.copy(ModBlocks.POLISHED_TUFF.get()).strength(1.5f).requiresCorrectToolForDrops()));
+
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {

@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
@@ -71,7 +72,30 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         stonecutterRecipes(consumer, ModBlocks.PEll_STAIRS.get(), ModBlocks.PEll.get());
         stonecutterRecipes(consumer, ModBlocks.PEll_SLAB.get(), ModBlocks.PEll.get());
         stonecutterRecipes(consumer, ModBlocks.PEll_WALL.get(), ModBlocks.PEll.get());
-
+        stonecutterRecipes(consumer, ModBlocks.TUFF_SLAB.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_STAIRS.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_WALL.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.CHISELED_TUFF.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICKS.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICKS.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_SLAB.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_SLAB.get(), ModBlocks.TUFF_BRICKS.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_SLAB.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_STAIRS.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_STAIRS.get(), ModBlocks.TUFF_BRICKS.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_STAIRS.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_WALL.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_WALL.get(), ModBlocks.TUFF_BRICKS.get());
+        stonecutterRecipes(consumer, ModBlocks.TUFF_BRICK_WALL.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.CHISELED_TUFF_BRICKS.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.CHISELED_TUFF_BRICKS.get(), ModBlocks.TUFF_BRICKS.get());
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_SLAB.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_SLAB.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_STAIRS.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_STAIRS.get(), ModBlocks.POLISHED_TUFF.get());
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_WALL.get(), Blocks.TUFF);
+        stonecutterRecipes(consumer, ModBlocks.POLISHED_TUFF_WALL.get(), ModBlocks.POLISHED_TUFF.get());
 
 
     }

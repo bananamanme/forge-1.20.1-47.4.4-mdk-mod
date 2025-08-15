@@ -1,5 +1,8 @@
 {
   "values": [
-    "it_starts_with_magic:pell_wall"
+    "it_starts_with_magic:pell_wall",
+    "it_starts_with_magic:tuff_wall",
+    "it_starts_with_magic:tuff_brick_wall",
+    "it_starts_with_magic:polished_tuff_wall"
   ]
 }

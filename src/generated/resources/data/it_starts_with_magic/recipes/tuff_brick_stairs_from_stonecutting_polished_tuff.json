@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "it_starts_with_magic:polished_tuff"
+  },
+  "result": "it_starts_with_magic:tuff_brick_stairs"
+}

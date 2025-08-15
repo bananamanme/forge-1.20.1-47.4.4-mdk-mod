@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "it_starts_with_magic:tuff_brick_wall_from_stonecutting_tuff_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_tuff_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "it_starts_with_magic:tuff_bricks"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_tuff_bricks",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "it_starts_with_magic:tuff_brick_wall_from_stonecutting_tuff_bricks"
+    ]
+  },
+  "sends_telemetry_event": false
+}

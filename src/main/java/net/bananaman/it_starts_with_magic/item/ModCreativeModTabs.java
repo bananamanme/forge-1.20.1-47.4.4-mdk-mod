@@ -38,8 +38,19 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.DEEPSLATE_AMETRINE_ORE.get());
                         output.accept(ModBlocks.AZURITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_AZURITE_ORE.get());
+                        output.accept(ModBlocks.TUFF_SLAB.get());
+                        output.accept(ModBlocks.TUFF_STAIRS.get());
+                        output.accept(ModBlocks.TUFF_WALL.get());
                         output.accept(ModBlocks.CHISELED_TUFF.get());
                         output.accept(ModBlocks.TUFF_BRICKS.get());
+                        output.accept(ModBlocks.TUFF_BRICK_SLAB.get());
+                        output.accept(ModBlocks.TUFF_BRICK_STAIRS.get());
+                        output.accept(ModBlocks.TUFF_BRICK_WALL.get());
+                        output.accept(ModBlocks.CHISELED_TUFF_BRICKS.get());
+                        output.accept(ModBlocks.POLISHED_TUFF.get());
+                        output.accept(ModBlocks.POLISHED_TUFF_SLAB.get());
+                        output.accept(ModBlocks.POLISHED_TUFF_STAIRS.get());
+                        output.accept(ModBlocks.POLISHED_TUFF_WALL.get());
 
                     })
 

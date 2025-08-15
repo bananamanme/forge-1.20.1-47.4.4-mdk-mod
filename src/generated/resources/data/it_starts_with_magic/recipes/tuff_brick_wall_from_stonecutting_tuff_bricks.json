@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "it_starts_with_magic:tuff_bricks"
+  },
+  "result": "it_starts_with_magic:tuff_brick_wall"
+}

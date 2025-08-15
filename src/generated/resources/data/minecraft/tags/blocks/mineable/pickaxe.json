@@ -8,7 +8,15 @@
     "it_starts_with_magic:deepslate_ametrine_ore",
     "it_starts_with_magic:azurite_ore",
     "it_starts_with_magic:deepslate_azurite_ore",
+    "it_starts_with_magic:tuff_slab",
+    "it_starts_with_magic:tuff_stairs",
     "it_starts_with_magic:chiseled_tuff",
-    "it_starts_with_magic:tuff_bricks"
+    "it_starts_with_magic:tuff_bricks",
+    "it_starts_with_magic:tuff_brick_slab",
+    "it_starts_with_magic:tuff_brick_stairs",
+    "it_starts_with_magic:chiseled_tuff_bricks",
+    "it_starts_with_magic:polished_tuff",
+    "it_starts_with_magic:polished_tuff_slab",
+    "it_starts_with_magic:polished_tuff_stairs"
   ]
 }
