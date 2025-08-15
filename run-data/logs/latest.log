@@ -1,33 +1,61 @@
-[15אוג׳2025 16:17:33.507] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\Ziv\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.4, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, it_starts_with_magic, --all, --output, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\generated\resources, --existing, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\main\resources]
-[15אוג׳2025 16:17:33.512] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
-[15אוג׳2025 16:17:33.689] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
-[15אוג׳2025 16:17:33.765] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Ziv/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
-[15אוג׳2025 16:17:34.290] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.4\c05c04093d241dea1d0f54782d19cfe5db9d0aac\javafmllanguage-1.20.1-47.4.4.jar is missing mods.toml file
-[15אוג׳2025 16:17:34.297] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.4\8a8bd6d44f3f0e6a1145b9066eac84fdcfbe7108\lowcodelanguage-1.20.1-47.4.4.jar is missing mods.toml file
-[15אוג׳2025 16:17:34.304] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.4\a8876f0a1a04237fc48a4a73692ea08e0443d2ba\mclanguage-1.20.1-47.4.4.jar is missing mods.toml file
-[15אוג׳2025 16:17:34.311] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.4\55a693260a8a7b851c3531972ef997294c191b3e\fmlcore-1.20.1-47.4.4.jar is missing mods.toml file
-[15אוג׳2025 16:17:34.432] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
-[15אוג׳2025 16:17:36.427] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Ziv\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, it_starts_with_magic, --all, --output, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\generated\resources, --existing, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\main\resources]
-[15אוג׳2025 16:17:36.936] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [it_starts_with_magic]
-[15אוג׳2025 16:17:43.155] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.4, for MC 1.20.1 with MCP 20230612.114412
-[15אוג׳2025 16:17:43.162] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.4 Initialized
-[15אוג׳2025 16:17:43.810] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ziv/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
-[15אוג׳2025 16:17:43.811] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ziv/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
-[15אוג׳2025 16:17:44.047] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
-[15אוג׳2025 16:17:44.126] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 78 ms
-[15אוג׳2025 16:17:44.126] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
-[15אוג׳2025 16:17:44.220] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 93 ms
-[15אוג׳2025 16:17:44.221] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: it_starts_with_magic
-[15אוג׳2025 16:17:44.496] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: it_starts_with_magic finished after 275 ms
-[15אוג׳2025 16:17:44.496] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: it_starts_with_magic
-[15אוג׳2025 16:17:44.505] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: it_starts_with_magic finished after 8 ms
-[15אוג׳2025 16:17:44.505] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id it_starts_with_magic
-[15אוג׳2025 16:17:44.525] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id it_starts_with_magic finished after 19 ms
-[15אוג׳2025 16:17:44.525] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id it_starts_with_magic
-[15אוג׳2025 16:17:44.527] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id it_starts_with_magic finished after 1 ms
-[15אוג׳2025 16:17:44.527] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
-[15אוג׳2025 16:17:44.548] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 20 ms
-[15אוג׳2025 16:17:44.549] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : it_starts_with_magic
-[15אוג׳2025 16:17:44.559] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : it_starts_with_magic finished after 9 ms
-[15אוג׳2025 16:17:44.559] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 512 ms
-[15אוג׳2025 16:17:44.617] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 236, old count: 206, new count: 237, removed stale: 0, written: 31
+[15אוג׳2025 16:33:45.414] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgedatauserdev, --assetIndex, 5, --assetsDir, C:\Users\Ziv\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.4, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mod, it_starts_with_magic, --all, --output, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\generated\resources, --existing, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\main\resources]
+[15אוג׳2025 16:33:45.421] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Eclipse Adoptium; OS Windows 10 arch amd64 version 10.0
+[15אוג׳2025 16:33:45.656] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: ImmediateWindowProvider not loading because launch target is forgedatauserdev
+[15אוג׳2025 16:33:45.741] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/Ziv/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[15אוג׳2025 16:33:46.290] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.4\c05c04093d241dea1d0f54782d19cfe5db9d0aac\javafmllanguage-1.20.1-47.4.4.jar is missing mods.toml file
+[15אוג׳2025 16:33:46.298] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.4\8a8bd6d44f3f0e6a1145b9066eac84fdcfbe7108\lowcodelanguage-1.20.1-47.4.4.jar is missing mods.toml file
+[15אוג׳2025 16:33:46.305] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.4\a8876f0a1a04237fc48a4a73692ea08e0443d2ba\mclanguage-1.20.1-47.4.4.jar is missing mods.toml file
+[15אוג׳2025 16:33:46.313] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\Ziv\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.4\55a693260a8a7b851c3531972ef997294c191b3e\fmlcore-1.20.1-47.4.4.jar is missing mods.toml file
+[15אוג׳2025 16:33:46.430] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[15אוג׳2025 16:33:48.828] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgedatauserdev' with arguments [--gameDir, ., --assetsDir, C:\Users\Ziv\.gradle\caches\forge_gradle\assets, --assetIndex, 5, --mod, it_starts_with_magic, --all, --output, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\generated\resources, --existing, C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\main\resources]
+[15אוג׳2025 16:33:49.425] [main/INFO] [net.minecraftforge.data.loading.DatagenModLoader/]: Initializing Data Gatherer for mods [it_starts_with_magic]
+[15אוג׳2025 16:33:57.283] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.4, for MC 1.20.1 with MCP 20230612.114412
+[15אוג׳2025 16:33:57.290] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.4 Initialized
+[15אוג׳2025 16:33:57.935] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ziv/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[15אוג׳2025 16:33:57.936] [main/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/Ziv/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1/forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[15אוג׳2025 16:33:58.180] [main/WARN] [net.minecraft.data.HashCache/]: Failed to parse cache C:\Users\Ziv\IdeaProjects\forge-1.20.1-47.4.4-mdk-mod\src\generated\resources\.cache\9fb1092f32d4fcbf9e061ffd718d4ec689c6c95e, discarding
+java.lang.IllegalStateException: Missing cache file header
+	at net.minecraft.data.HashCache$ProviderCache.load(HashCache.java:193) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraft.data.HashCache.readCache(HashCache.java:72) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraft.data.HashCache.<init>(HashCache.java:59) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraft.data.DataGenerator.run(DataGenerator.java:34) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraftforge.data.event.GatherDataEvent$DataGeneratorConfig.lambda$runAll$2(GatherDataEvent.java:111) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at cpw.mods.modlauncher.api.LamdbaExceptionUtils.lambda$rethrowConsumer$0(LamdbaExceptionUtils.java:34) ~[modlauncher-10.0.9.jar:10.0.9+10.0.9+main.dcd20f30]
+	at java.util.LinkedHashMap$LinkedValues.forEach(LinkedHashMap.java:647) ~[?:?]
+	at net.minecraftforge.data.event.GatherDataEvent$DataGeneratorConfig.runAll(GatherDataEvent.java:107) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraftforge.data.loading.DatagenModLoader.begin(DatagenModLoader.java:54) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at net.minecraft.data.Main.main(Main.java:90) ~[forge-1.20.1-47.4.4_mapped_parchment_2023.09.03-1.20.1.jar:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:?]
+	at java.lang.reflect.Method.invoke(Method.java:569) ~[?:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.runTarget(CommonLaunchHandler.java:111) ~[fmlloader-1.20.1-47.4.4.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonLaunchHandler.dataService(CommonLaunchHandler.java:107) ~[fmlloader-1.20.1-47.4.4.jar:?]
+	at net.minecraftforge.fml.loading.targets.ForgeDataUserdevLaunchHandler.devService(ForgeDataUserdevLaunchHandler.java:22) ~[fmlloader-1.20.1-47.4.4.jar:?]
+	at net.minecraftforge.fml.loading.targets.CommonDevLaunchHandler.lambda$makeService$7(CommonDevLaunchHandler.java:135) ~[fmlloader-1.20.1-47.4.4.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandlerDecorator.launch(LaunchServiceHandlerDecorator.java:30) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:53) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.LaunchServiceHandler.launch(LaunchServiceHandler.java:71) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.run(Launcher.java:108) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.Launcher.main(Launcher.java:78) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:26) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.modlauncher.BootstrapLaunchConsumer.accept(BootstrapLaunchConsumer.java:23) ~[modlauncher-10.0.9.jar:?]
+	at cpw.mods.bootstraplauncher.BootstrapLauncher.main(BootstrapLauncher.java:141) ~[bootstraplauncher-1.1.2.jar:?]
+[15אוג׳2025 16:33:58.189] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Recipes
+[15אוג׳2025 16:33:58.271] [main/INFO] [net.minecraft.data.DataGenerator/]: Recipes finished after 81 ms
+[15אוג׳2025 16:33:58.272] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Loot Tables
+[15אוג׳2025 16:33:58.360] [main/INFO] [net.minecraft.data.DataGenerator/]: Loot Tables finished after 87 ms
+[15אוג׳2025 16:33:58.360] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Block States: it_starts_with_magic
+[15אוג׳2025 16:33:58.623] [main/INFO] [net.minecraft.data.DataGenerator/]: Block States: it_starts_with_magic finished after 262 ms
+[15אוג׳2025 16:33:58.623] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Item Models: it_starts_with_magic
+[15אוג׳2025 16:33:58.633] [main/INFO] [net.minecraft.data.DataGenerator/]: Item Models: it_starts_with_magic finished after 9 ms
+[15אוג׳2025 16:33:58.633] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:block mod id it_starts_with_magic
+[15אוג׳2025 16:33:58.652] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:block mod id it_starts_with_magic finished after 18 ms
+[15אוג׳2025 16:33:58.652] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Tags for minecraft:item mod id it_starts_with_magic
+[15אוג׳2025 16:33:58.655] [main/INFO] [net.minecraft.data.DataGenerator/]: Tags for minecraft:item mod id it_starts_with_magic finished after 2 ms
+[15אוג׳2025 16:33:58.655] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Registries
+[15אוג׳2025 16:33:58.671] [main/INFO] [net.minecraft.data.DataGenerator/]: Registries finished after 17 ms
+[15אוג׳2025 16:33:58.671] [main/INFO] [net.minecraft.data.DataGenerator/]: Starting provider: Global Loot Modifiers : it_starts_with_magic
+[15אוג׳2025 16:33:58.681] [main/INFO] [net.minecraft.data.DataGenerator/]: Global Loot Modifiers : it_starts_with_magic finished after 9 ms
+[15אוג׳2025 16:33:58.681] [main/INFO] [net.minecraft.data.DataGenerator/]: All providers took: 493 ms
+[15אוג׳2025 16:33:58.723] [main/INFO] [net.minecraft.data.HashCache/]: Caching: total files: 238, old count: 170, new count: 239, removed stale: 0, written: 68
