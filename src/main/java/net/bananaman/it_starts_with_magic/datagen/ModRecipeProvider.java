@@ -11,6 +11,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.crafting.conditions.IConditionBuilder;
 
 import java.util.Iterator;
@@ -51,6 +52,13 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModItems.RUBY.get()),has(ModItems.RUBY.get()))
                 .save(consumer);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.TUFF_BRICKS.get())
+                .pattern("TT")
+                .pattern("TT")
+                .define('T', Blocks.TUFF)
+                .unlockedBy(getHasName(Items.TUFF),has(Items.TUFF))
+                .save(consumer);
+
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC,ModItems.SPELLSHARD.get(), 9)
                 .requires(ModBlocks.PEll.get())
                 .unlockedBy(getHasName(ModBlocks.PEll.get()),has(ModBlocks.PEll.get()))
@@ -68,16 +76,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get()))
                 .save(consumer);
 
-        stonecutterRecipes(consumer, ModBlocks.PEll_STAIRS.get(), ModBlocks.PEll.get());
-        stonecutterRecipes(consumer, ModBlocks.PEll_SLAB.get(), ModBlocks.PEll.get());
-        stonecutterRecipes(consumer, ModBlocks.PEll_WALL.get(), ModBlocks.PEll.get());
+        stonecutterRecipes(consumer, ModBlocks.PEll_STAIRS.get(), ModBlocks.PEll.get(), 1);
+        stonecutterRecipes(consumer, ModBlocks.PEll_SLAB.get(), ModBlocks.PEll.get(),2);
+        stonecutterRecipes(consumer, ModBlocks.PEll_WALL.get(), ModBlocks.PEll.get(),1);
 
 
 
     }
 
-    protected void stonecutterRecipes(Consumer<FinishedRecipe> consumer, ItemLike output, ItemLike input) {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.MISC, output)
+    protected void stonecutterRecipes(Consumer<FinishedRecipe> consumer, ItemLike output, ItemLike input, int outputCount) {
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(input), RecipeCategory.MISC, output, outputCount)
                 .unlockedBy(getHasName(input), has(input))
                 .save(consumer, "it_starts_with_magic:" + getItemName(output) + "_from_stonecutting_" + getItemName(input));
     }
