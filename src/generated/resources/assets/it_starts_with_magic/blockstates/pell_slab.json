@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "it_starts_with_magic:block/pell_slab"
+    },
+    "type=double": {
+      "model": "it_starts_with_magic:block/pell"
+    },
+    "type=top": {
+      "model": "it_starts_with_magic:block/pell_slab_top"
+    }
+  }
+}

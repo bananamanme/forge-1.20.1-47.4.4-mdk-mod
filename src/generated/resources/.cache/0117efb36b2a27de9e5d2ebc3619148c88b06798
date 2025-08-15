@@ -1,6 +1,9 @@
-// 1.20.1	2025-08-09T16:32:12.8160866	Item Models: it_starts_with_magic
+// 1.20.1	2025-08-15T11:38:55.6263718	Item Models: it_starts_with_magic
 66a359c0794d935f8028464d3a7828050cd30e7b assets/it_starts_with_magic/models/item/ametrine.json
 71b8b2d05ddcf290dce78c0b1219e045e19670a5 assets/it_starts_with_magic/models/item/lapis_lazuli_shard.json
+d3a5789353ef26eda365f954aecbb228051cd278 assets/it_starts_with_magic/models/item/pell_slab.json
+af6c07caa1bfa28e66ff42d74d66799e60c981f2 assets/it_starts_with_magic/models/item/pell_stairs.json
+aeb19a3b841c3c94db9ac0aab91daa63a8f6ce96 assets/it_starts_with_magic/models/item/pell_wall.json
 f31e59346b10773b752904a43dc763f942edc5fe assets/it_starts_with_magic/models/item/ruby.json
 ef44b81f4b3c753d1092ac98c1d64a265c5b84b7 assets/it_starts_with_magic/models/item/russssian_music_disc.json
 811bf646aeaacf8a0c729fe37e5ea747053cddf7 assets/it_starts_with_magic/models/item/spell_shard.json

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "it_starts_with_magic:block/pell",
+    "side": "it_starts_with_magic:block/pell",
+    "top": "it_starts_with_magic:block/pell"
+  }
+}

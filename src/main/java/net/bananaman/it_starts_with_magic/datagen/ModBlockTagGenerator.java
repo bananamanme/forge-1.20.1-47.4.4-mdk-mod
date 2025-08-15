@@ -42,5 +42,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.DEEPSLATE_AZURITE_ORE.get()
                 );
 
+        this.tag(BlockTags.WALLS)
+                .add(ModBlocks.PEll_WALL.get());
+
     }
 }

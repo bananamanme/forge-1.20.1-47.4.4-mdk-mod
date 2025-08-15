@@ -3,7 +3,11 @@ package net.bananaman.it_starts_with_magic.datagen;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.minecraft.data.PackOutput;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.StairBlock;
+import net.minecraft.world.level.block.WallBlock;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
 import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
@@ -28,6 +32,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));
 
+
+        stairsBlock(((StairBlock) ModBlocks.PEll_STAIRS.get()), blockTexture(ModBlocks.PEll.get()));
+        slabBlock((SlabBlock) ModBlocks.PEll_SLAB.get(), blockTexture(ModBlocks.PEll.get()), blockTexture(ModBlocks.PEll.get()));
+
+        wallBlock(((WallBlock) ModBlocks.PEll_WALL.get()), blockTexture(ModBlocks.PEll.get()));
 
     }
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

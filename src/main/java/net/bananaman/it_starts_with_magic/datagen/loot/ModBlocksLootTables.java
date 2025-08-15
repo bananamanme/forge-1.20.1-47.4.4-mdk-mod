@@ -26,6 +26,8 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
     @Override
     protected void generate() {
         this.dropSelf(ModBlocks.PEll.get());
+        this.dropSelf(ModBlocks.PEll_STAIRS.get());
+        this.dropSelf(ModBlocks.PEll_WALL.get());
         this.dropSelf(ModBlocks.THE_ENTITY_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
 
@@ -41,6 +43,11 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
                 block -> createAzuriteOreDrop(ModBlocks.AZURITE_ORE.get(),ModItems.LAPIS_LAZULI_SHARD.get()));
         this.add(ModBlocks.DEEPSLATE_AZURITE_ORE.get(),
                 block -> createAzuriteOreDrop(ModBlocks.DEEPSLATE_AZURITE_ORE.get(),ModItems.LAPIS_LAZULI_SHARD.get()));
+
+
+
+        this.add(ModBlocks.PEll_SLAB.get(),
+                block -> createSlabItemTable(ModBlocks.PEll_SLAB.get()));
     }
 
 

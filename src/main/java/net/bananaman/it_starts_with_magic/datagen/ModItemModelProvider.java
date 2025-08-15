@@ -1,14 +1,17 @@
 package net.bananaman.it_starts_with_magic.datagen;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
+import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.RecordItem;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public class ModItemModelProvider extends ItemModelProvider {
@@ -27,6 +30,11 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RUBY);
         simpleItem(ModItems.AMETRINE);
 
+        wallItem(ModBlocks.PEll_WALL,ModBlocks.PEll);
+
+        evenSimplerBlockItem(ModBlocks.PEll_STAIRS);
+        evenSimplerBlockItem(ModBlocks.PEll_SLAB);
+
 
 
     }
@@ -34,5 +42,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         return withExistingParent(item.getId().getPath(),
                 new ResourceLocation("item/generated")).texture("layer0",
                 new ResourceLocation(ItStartsWithMagicMod.MOD_ID,"item/"+item.getId().getPath()));
+    }
+
+    public void wallItem(RegistryObject<Block> block, RegistryObject<Block> baseBlock) {
+        this.withExistingParent(ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),mcLoc("block/wall_inventory"))
+                .texture("wall",new ResourceLocation(ItStartsWithMagicMod.MOD_ID,"block/"+ForgeRegistries.BLOCKS.getKey(baseBlock.get()).getPath()));
+    }
+
+    public void evenSimplerBlockItem(RegistryObject<Block> block) {
+        this.withExistingParent(ItStartsWithMagicMod.MOD_ID+ ":" +ForgeRegistries.BLOCKS.getKey(block.get()).getPath(),
+                modLoc("block/"+ForgeRegistries.BLOCKS.getKey(block.get()).getPath()));
     }
 }
