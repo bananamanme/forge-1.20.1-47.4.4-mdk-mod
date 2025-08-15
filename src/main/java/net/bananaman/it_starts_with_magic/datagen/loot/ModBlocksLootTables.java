@@ -30,6 +30,8 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PEll_WALL.get());
         this.dropSelf(ModBlocks.THE_ENTITY_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
+        this.dropSelf(ModBlocks.TUFF_BRICKS.get());
+        this.dropSelf(ModBlocks.CHISELED_TUFF.get());
 
         this.add(ModBlocks.RUBY_ORE.get(),
                 block -> createRubyOreDrop(ModBlocks.RUBY_ORE.get(),ModItems.RUBY.get()));

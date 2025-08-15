@@ -39,7 +39,9 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.AMETRINE_ORE.get(),
                         ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
                         ModBlocks.AZURITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_AZURITE_ORE.get()
+                        ModBlocks.DEEPSLATE_AZURITE_ORE.get(),
+                        ModBlocks.CHISELED_TUFF.get(),
+                        ModBlocks.TUFF_BRICKS.get()
                 );
 
         this.tag(BlockTags.WALLS)

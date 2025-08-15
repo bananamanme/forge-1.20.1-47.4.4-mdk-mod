@@ -28,6 +28,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_AMETRINE_ORE);
         blockWithItem(ModBlocks.AZURITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_AZURITE_ORE);
+        blockWithItem(ModBlocks.CHISELED_TUFF);
+        blockWithItem(ModBlocks.TUFF_BRICKS);
 
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));

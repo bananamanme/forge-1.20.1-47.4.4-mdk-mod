@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 // 1.20.1	2025-08-15T11:26:38.9356494	Tags for minecraft:block mod id it_starts_with_magic
 f0e507c6335285bc3f6da86b9907895a719f831a data/minecraft/tags/blocks/mineable/pickaxe.json
+=======
+// 1.20.1	2025-08-15T10:27:49.937891	Tags for minecraft:block mod id it_starts_with_magic
+45bcec712b8ad429e331748703b696259004882c data/minecraft/tags/blocks/mineable/pickaxe.json
+>>>>>>> a642be3f5ef7008368c86043c0e216fd39dbf7b8
 f0e507c6335285bc3f6da86b9907895a719f831a data/minecraft/tags/blocks/needs_iron_tool.json
 db1999bfc6d86a430f49b8ad8e7f25a17bb91867 data/minecraft/tags/blocks/walls.json

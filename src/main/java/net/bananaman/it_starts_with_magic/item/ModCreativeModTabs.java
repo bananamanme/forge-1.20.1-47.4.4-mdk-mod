@@ -38,6 +38,8 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.DEEPSLATE_AMETRINE_ORE.get());
                         output.accept(ModBlocks.AZURITE_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_AZURITE_ORE.get());
+                        output.accept(ModBlocks.CHISELED_TUFF.get());
+                        output.accept(ModBlocks.TUFF_BRICKS.get());
 
                     })
 
