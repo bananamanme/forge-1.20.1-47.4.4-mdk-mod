@@ -35,6 +35,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         evenSimplerBlockItem(ModBlocks.PEll_STAIRS);
         evenSimplerBlockItem(ModBlocks.PEll_SLAB);
 
+        evenSimplerBlockItem(ModBlocks.CHISELED_TUFF);
+
 
 
     }

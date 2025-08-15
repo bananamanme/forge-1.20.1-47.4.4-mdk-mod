@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-15T12:13:55.8684749	Block States: it_starts_with_magic
+// 1.20.1	2025-08-15T16:54:57.8126694	Block States: it_starts_with_magic
 34ff058eae73830ecb68a782e2ee002ecfb9a0dc assets/it_starts_with_magic/blockstates/ametrine_ore.json
 fee8443cfccf2a410b73fa4dfebd26f9b3b21a03 assets/it_starts_with_magic/blockstates/azurite_ore.json
 e0eff8f953576addecb57def727ab7bb18e00143 assets/it_starts_with_magic/blockstates/chiseled_tuff.json
@@ -15,7 +15,7 @@ d732b3f10dc24ecd6ffe88f626ddefb045fcea4f assets/it_starts_with_magic/blockstates
 8f7f78040cab8e326b967a76f3a432ee19c4f576 assets/it_starts_with_magic/blockstates/tuff_bricks.json
 8df6b53ca0c597bba9b490ed00ab7bf1eb0ed9d7 assets/it_starts_with_magic/models/block/ametrine_ore.json
 7ea26e52b6c11e18dc813ab5a61f6a69dbda14d8 assets/it_starts_with_magic/models/block/azurite_ore.json
-daf3fd8f50a378d8fdef0bbb7e8a202c28c84806 assets/it_starts_with_magic/models/block/chiseled_tuff.json
+c59a2205d3cb1febdcc26d10e6729c7630ca6c5c assets/it_starts_with_magic/models/block/chiseled_tuff.json
 98f8ab38bf5f8be24c14b17d491333c1533807df assets/it_starts_with_magic/models/block/deepslate_ametrine_ore.json
 4a2f154db03a12611a5cacc8e7503b7c4a79a9e6 assets/it_starts_with_magic/models/block/deepslate_azurite_ore.json
 06f7d1693aad3a0e16c932438cb66622ed00ccb9 assets/it_starts_with_magic/models/block/deepslate_ruby_ore.json
