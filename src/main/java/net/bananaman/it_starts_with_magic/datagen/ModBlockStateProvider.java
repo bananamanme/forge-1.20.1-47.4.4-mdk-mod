@@ -25,10 +25,18 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_AMETRINE_ORE);
         blockWithItem(ModBlocks.AZURITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_AZURITE_ORE);
-        blockWithItem(ModBlocks.CHISELED_TUFF);
         blockWithItem(ModBlocks.TUFF_BRICKS);
         blockWithItem(ModBlocks.CHISELED_TUFF_BRICKS);
         blockWithItem(ModBlocks.POLISHED_TUFF);
+
+        simpleBlockWithItem(ModBlocks.CHISELED_TUFF.get(),
+                models().cubeBottomTop(
+                        "chiseled_tuff",
+                        modLoc("block/chiseled_tuff_side"), // Texture for the sides
+                        modLoc("block/chiseled_tuff_bottom"),   // Texture for the bottom
+                        modLoc("block/chiseled_tuff_top")));
+
+
 
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));
