@@ -50,6 +50,7 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
 
         this.add(ModBlocks.PEll_SLAB.get(),
                 block -> createSlabItemTable(ModBlocks.PEll_SLAB.get()));
+
     }
 
 

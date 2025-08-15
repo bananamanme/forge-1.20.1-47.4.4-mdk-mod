@@ -68,7 +68,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .unlockedBy(getHasName(ModBlocks.RUBY_BLOCK.get()),has(ModBlocks.RUBY_BLOCK.get()))
                 .save(consumer);
 
-        stonecutterRecipes(consumer, ModBlocks.PEll.get(), ModItems.SPELLSHARD.get());
+        stonecutterRecipes(consumer, ModBlocks.PEll_STAIRS.get(), ModBlocks.PEll.get());
+        stonecutterRecipes(consumer, ModBlocks.PEll_SLAB.get(), ModBlocks.PEll.get());
+        stonecutterRecipes(consumer, ModBlocks.PEll_WALL.get(), ModBlocks.PEll.get());
 
 
 

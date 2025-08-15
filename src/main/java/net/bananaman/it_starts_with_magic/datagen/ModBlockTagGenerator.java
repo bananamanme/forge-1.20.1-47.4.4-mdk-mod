@@ -45,7 +45,10 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                 );
 
         this.tag(BlockTags.WALLS)
-                .add(ModBlocks.PEll_WALL.get());
+                .add(ModBlocks.PEll_WALL.get()
+
+
+                );
 
     }
 }

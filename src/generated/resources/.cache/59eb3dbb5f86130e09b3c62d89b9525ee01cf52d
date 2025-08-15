@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// 1.20.1	2025-08-15T11:26:38.934138	Loot Tables
-=======
-// 1.20.1	2025-08-15T10:27:49.9358959	Loot Tables
->>>>>>> a642be3f5ef7008368c86043c0e216fd39dbf7b8
+// 1.20.1	2025-08-15T12:13:55.8735677	Loot Tables
 12648febb7294088ace3fd5cc507f3a7a5ccea1d data/it_starts_with_magic/loot_tables/blocks/ametrine_ore.json
 992c136dfdc7f5999223f5bf0f6cc325e88e6b21 data/it_starts_with_magic/loot_tables/blocks/azurite_ore.json
 98652772487c126e8acd1076a0583393a078d80a data/it_starts_with_magic/loot_tables/blocks/chiseled_tuff.json

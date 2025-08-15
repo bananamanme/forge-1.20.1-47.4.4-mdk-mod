@@ -1,12 +1,12 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_spell_shard": {
+    "has_pell": {
       "conditions": {
         "items": [
           {
             "items": [
-              "it_starts_with_magic:spell_shard"
+              "it_starts_with_magic:pell"
             ]
           }
         ]
@@ -15,20 +15,20 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "it_starts_with_magic:pell_from_stonecutting_spell_shard"
+        "recipe": "it_starts_with_magic:pell_stairs_from_stonecutting_pell"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_spell_shard",
+      "has_pell",
       "has_the_recipe"
     ]
   ],
   "rewards": {
     "recipes": [
-      "it_starts_with_magic:pell_from_stonecutting_spell_shard"
+      "it_starts_with_magic:pell_stairs_from_stonecutting_pell"
     ]
   },
   "sends_telemetry_event": false

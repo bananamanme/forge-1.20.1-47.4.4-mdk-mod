@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "item": "it_starts_with_magic:spell_shard"
-  },
-  "result": "it_starts_with_magic:pell"
-}

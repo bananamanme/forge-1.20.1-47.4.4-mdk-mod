@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// 1.20.1	2025-08-15T11:26:38.9301039	Block States: it_starts_with_magic
-=======
-// 1.20.1	2025-08-15T10:27:49.9329043	Block States: it_starts_with_magic
->>>>>>> a642be3f5ef7008368c86043c0e216fd39dbf7b8
+// 1.20.1	2025-08-15T12:13:55.8684749	Block States: it_starts_with_magic
 34ff058eae73830ecb68a782e2ee002ecfb9a0dc assets/it_starts_with_magic/blockstates/ametrine_ore.json
 fee8443cfccf2a410b73fa4dfebd26f9b3b21a03 assets/it_starts_with_magic/blockstates/azurite_ore.json
 e0eff8f953576addecb57def727ab7bb18e00143 assets/it_starts_with_magic/blockstates/chiseled_tuff.json
