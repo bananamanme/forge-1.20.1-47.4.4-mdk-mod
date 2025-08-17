@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-// 1.20.1	2025-08-15T16:17:44.5653057	Item Models: it_starts_with_magic
-=======
-// 1.20.1	2025-08-15T16:54:57.8152121	Item Models: it_starts_with_magic
->>>>>>> c6a6fd3dc91baafd9d580e7887a5771563eb0a06
+// 1.20.1	2025-08-15T17:00:37.016966	Item Models: it_starts_with_magic
 66a359c0794d935f8028464d3a7828050cd30e7b assets/it_starts_with_magic/models/item/ametrine.json
 333d8f2f32a7c7cfc76e8790dd2136f0c675eb43 assets/it_starts_with_magic/models/item/chiseled_tuff.json
 71b8b2d05ddcf290dce78c0b1219e045e19670a5 assets/it_starts_with_magic/models/item/lapis_lazuli_shard.json

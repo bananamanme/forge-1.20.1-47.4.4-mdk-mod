@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:jigsaw",
+
+  "start_pool": "it_starts_with_magic:start_pool/fossil_dungeon",
+
+  "size": 2,
+
+  "max_distance_from_center": 80,
+
+  "biomes": "#it_starts_with_magic:has_structure/soul_sand_valley",
+
+  "step": "underground_decoration",
+
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 32
+    },
+    "max_inclusive": {
+      "below_top": 2
+    },
+    "relative_to_end_of_surface": -6,
+    "relative_to_start_of_surface": 0,
+    "relative_to_start_of_liquid": 0
+  },
+  "terrain_adaptation": "beard",
+
+  "liquid_settings": "ignore_waterlogging",
+
+  "use_expansion_hack": false,
+
+  "spawn_overrides": {
+    "creature": {
+      "bounding_box": "piece",
+      "spawns": [
+        {
+          "type": "minecraft:empty",
+          "weight": 1,
+          "minCount": 1,
+          "maxCount": 1
+        }
+      ]
+    }
+  }
+}
