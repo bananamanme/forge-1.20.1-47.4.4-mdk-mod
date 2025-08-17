@@ -7,6 +7,8 @@ import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.bananaman.it_starts_with_magic.loot.ModLootModifiers;
+import net.bananaman.it_starts_with_magic.mana.ManaOverlay;
+import net.bananaman.it_starts_with_magic.networking.ModMessages;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.particle.ModSonicBoomParticle;
 import net.bananaman.it_starts_with_magic.recipe.ModRecipes;
@@ -15,7 +17,9 @@ import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.particle.SonicBoomParticle;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -82,11 +86,18 @@ public class ItStartsWithMagicMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.THE_ENTITY_BLOCK_MENU.get(), TheEntityBlockScreen::new);
+            ModMessages.register();
+        }
+        @SubscribeEvent
+        public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
+            event.registerAbove(new ResourceLocation("minecraft", "hotbar"), "mana_overlay", ManaOverlay.MANA_OVERLAY);
         }
 
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event){
             event.registerSpriteSet(ModParticles.MODSONICBOOMPARTICLE.get(), ModSonicBoomParticle.Provider::new);
+
+
 
         }
     }

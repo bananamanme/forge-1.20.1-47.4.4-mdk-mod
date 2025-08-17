@@ -30,6 +30,9 @@ public class ModCreativeModTabs {
 
 
                         output.accept(ModBlocks.PEll.get());
+                        output.accept(ModBlocks.PEll_WALL.get());
+                        output.accept(ModBlocks.PEll_SLAB.get());
+                        output.accept(ModBlocks.PEll_STAIRS.get());
                         output.accept(ModBlocks.THE_ENTITY_BLOCK.get());
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());

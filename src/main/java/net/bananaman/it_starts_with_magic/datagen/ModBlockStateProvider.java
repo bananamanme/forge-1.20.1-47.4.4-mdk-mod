@@ -26,7 +26,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.AZURITE_ORE);
         blockWithItem(ModBlocks.DEEPSLATE_AZURITE_ORE);
         blockWithItem(ModBlocks.TUFF_BRICKS);
-        blockWithItem(ModBlocks.CHISELED_TUFF_BRICKS);
         blockWithItem(ModBlocks.POLISHED_TUFF);
 
         simpleBlockWithItem(ModBlocks.CHISELED_TUFF.get(),
@@ -34,7 +33,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
                         "chiseled_tuff",
                         modLoc("block/chiseled_tuff_side"), // Texture for the sides
                         modLoc("block/chiseled_tuff_bottom"),   // Texture for the bottom
-                        modLoc("block/chiseled_tuff_top")));
+                        modLoc("block/chiseled_tuff_top")));   // Texture for the top
+
+        simpleBlockWithItem(ModBlocks.CHISELED_TUFF_BRICKS.get(),
+                models().cubeBottomTop(
+                        "chiseled_tuff_bricks",
+                        modLoc("block/chiseled_tuff_bricks_side"), // Texture for the sides
+                        modLoc("block/chiseled_tuff_bricks_bottom"),   // Texture for the bottom
+                        modLoc("block/chiseled_tuff_bricks_top")));   // Texture for the top
 
 
 

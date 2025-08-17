@@ -1,0 +1,24 @@
+package net.bananaman.it_starts_with_magic.mana;
+
+import net.minecraft.client.Minecraft;
+import net.minecraft.network.FriendlyByteBuf;
+import net.minecraftforge.network.NetworkEvent;
+
+import java.util.function.Supplier;
+
+public class NotEnoughManaPacket {
+
+    public NotEnoughManaPacket() {}
+
+    public NotEnoughManaPacket(FriendlyByteBuf buf) {}
+
+    public void toBytes(FriendlyByteBuf buf) {}
+
+    public boolean handle(Supplier<NetworkEvent.Context> supplier) {
+        NetworkEvent.Context context = supplier.get();
+        context.enqueueWork(() -> {
+            ManaOverlay.displayNotEnoughManaMessage();
+        });
+        return true;
+    }
+}
