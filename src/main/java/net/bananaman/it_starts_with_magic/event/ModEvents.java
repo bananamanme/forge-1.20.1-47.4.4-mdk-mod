@@ -4,7 +4,9 @@ import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.mana.Mana;
 import net.bananaman.it_starts_with_magic.mana.ManaProvider;
 import net.bananaman.it_starts_with_magic.mana.ManaSyncPacket;
+import net.bananaman.it_starts_with_magic.modstuff.SpellBookHolderProvider;
 import net.bananaman.it_starts_with_magic.networking.ModMessages;
+import net.bananaman.it_starts_with_magic.networking.packet.SpellbookSyncS2CPacket;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -25,6 +27,11 @@ public class ModEvents {
                 ModMessages.sendToPlayer(new ManaSyncPacket(mana.getMana()), (ServerPlayer) event.getEntity());
             });
         }
+        if (event.getEntity() instanceof ServerPlayer serverPlayer) {
+            serverPlayer.getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(holder -> {
+                ModMessages.sendToPlayer(new SpellbookSyncS2CPacket(holder.getSpellbook()), serverPlayer);
+            });
+        }
     }
 
     @SubscribeEvent
@@ -37,6 +44,12 @@ public class ModEvents {
                                     newMana.copyFrom(oldMana);
                                 });
                     });
+
+            event.getOriginal().getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(oldHolder -> {
+                event.getEntity().getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(newHolder -> {
+                    newHolder.setSpellbook(oldHolder.getSpellbook().copy());
+                });
+            });
         }
     }
 

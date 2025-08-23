@@ -18,6 +18,7 @@ public class ModCapabilities {
     @SubscribeEvent
     public static void  onRegisterCapabilities(RegisterCapabilitiesEvent event){
         event.register(IMana.class);
+        event.register(ISpellbookHolder.class);
     }
 
     @SubscribeEvent
@@ -25,6 +26,10 @@ public class ModCapabilities {
         if (event.getObject() instanceof Player) {
             event.addCapability(new ResourceLocation("it_starts_with_magic","mana"),new ManaProvider());
             event.addCapability(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "spell_cooldown"), new SpellCooldownProvider());
+            event.addCapability(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "spellbook_holder"), new SpellBookHolderProvider());
         }
     }
+
+
+
 }

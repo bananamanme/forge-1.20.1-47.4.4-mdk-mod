@@ -1,6 +1,7 @@
 package net.bananaman.it_starts_with_magic;
 
 
+import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
@@ -13,13 +14,16 @@ import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.particle.ModSonicBoomParticle;
 import net.bananaman.it_starts_with_magic.recipe.ModRecipes;
 import net.bananaman.it_starts_with_magic.screen.ModMenuTypes;
+import net.bananaman.it_starts_with_magic.screen.SpellBookScreen;
 import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
+import net.minecraft.client.KeyMapping;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.particle.SonicBoomParticle;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
+import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -31,6 +35,7 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -82,12 +87,20 @@ public class ItStartsWithMagicMod
     @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
+
+
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.THE_ENTITY_BLOCK_MENU.get(), TheEntityBlockScreen::new);
+            MenuScreens.register(ModMenuTypes.SPELLBOOK_MENU.get(), SpellBookScreen::new);
+
             ModMessages.register();
+
+
         }
+
+
         @SubscribeEvent
         public static void registerGuiOverlays(RegisterGuiOverlaysEvent event) {
             event.registerAbove(new ResourceLocation("minecraft", "hotbar"), "mana_overlay", ManaOverlay.MANA_OVERLAY);

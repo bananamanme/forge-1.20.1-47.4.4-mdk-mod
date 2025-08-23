@@ -3,7 +3,9 @@ package net.bananaman.it_starts_with_magic.item.custom;
 import net.bananaman.it_starts_with_magic.mana.ManaHelper;
 import net.bananaman.it_starts_with_magic.mana.ManaProvider;
 import net.bananaman.it_starts_with_magic.mana.ManaSyncPacket;
+import net.bananaman.it_starts_with_magic.modstuff.SpellBookHolderProvider;
 import net.bananaman.it_starts_with_magic.networking.ModMessages;
+import net.bananaman.it_starts_with_magic.networking.packet.SpellbookSyncS2CPacket;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.spells.BoomBeam;
 import net.minecraft.core.BlockPos;
@@ -39,14 +41,33 @@ public class TheSpellBook extends Item {
 
     @Override
     public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        ItemStack stack = pPlayer.getItemInHand(pUsedHand);
+        ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
 
-        if (!pLevel.isClientSide) {
-            BoomBeam.castSpell(pLevel,pPlayer);
+        // Server-side logic only
+        if (!pLevel.isClientSide()) {
+
+            // Get the player's capability
+            pPlayer.getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(holder -> {
+                ItemStack equippedSpellbook = holder.getSpellbook();
+
+                // If the equipped slot is empty, equip the current spellbook
+                if (equippedSpellbook.isEmpty()) {
+                    holder.setSpellbook(itemStack.copy());
+                    pPlayer.setItemInHand(pUsedHand, ItemStack.EMPTY);
+                } else {
+                    // If the equipped slot is not empty, swap the items
+                    holder.setSpellbook(itemStack.copy());
+                    pPlayer.setItemInHand(pUsedHand, equippedSpellbook.copy());
+                }
+
+                // Synchronize the change to the client
+                if (pPlayer instanceof ServerPlayer serverPlayer) {
+                    ModMessages.sendToPlayer(new SpellbookSyncS2CPacket(holder.getSpellbook()), serverPlayer);
+                }
+            });
         }
 
-        return InteractionResultHolder.sidedSuccess(stack, pLevel.isClientSide());
+        return InteractionResultHolder.success(itemStack);
     }
-
 
 }

@@ -16,7 +16,6 @@ public class ManaOverlay {
     private static long messageStartTime = 0;
 
     public static final IGuiOverlay MANA_OVERLAY = ((gui, guiGraphics, partialTicks, width, height) -> {
-        if (!gui.getMinecraft().player.isCreative()) {
             Minecraft mc = gui.getMinecraft();
             mc.player.getCapability(ManaProvider.MANA_CAPABILITY).ifPresent(mana -> {
                 int manaAmount = mana.getMana();
@@ -31,8 +30,6 @@ public class ManaOverlay {
 
                 // Calculate the width of the filled mana
                 int filledWidth = (int) (((float) manaAmount / maxMana) * BAR_WIDTH);
-
-                System.out.println(filledWidth);
 
                 // Draw the filled portion of the mana bar over the background
                 guiGraphics.blit(FILLED_MANA_BAR_TEXTURE, x, y, 0, 0, filledWidth, BAR_HEIGHT,BAR_WIDTH,BAR_HEIGHT);
@@ -49,7 +46,7 @@ public class ManaOverlay {
                 String notEnoughManaText = "Not enough mana!";
                 int textWidth = mc.font.width(notEnoughManaText);
                 int textX = (width - textWidth) / 2;
-                int textY = height - 50;
+                int textY = height - 60;
 
                 // Calculate the fade effect
                 long elapsedTime = System.currentTimeMillis() - messageStartTime;
@@ -66,7 +63,7 @@ public class ManaOverlay {
             } else {
                 messageToDisplay = null;
             }
-        }
+
     });
 
     public static void displayNotEnoughManaMessage() {
