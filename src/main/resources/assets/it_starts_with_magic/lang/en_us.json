@@ -49,5 +49,12 @@
 
 
   "sounds.it_starts_with_magic.tech": "The Tech Song",
-  "sounds.it_starts_with_magic.weird_rythem": "The Weird Rythem Song"
+  "sounds.it_starts_with_magic.weird_rythem": "The Weird Rythem Song",
+
+
+
+  "key.category.it_starts_with_magic.magic" : "It Starts With Magic",
+  "key..it_starts_with_magic.magic.cast_spell" : "Spell Cast",
+
+  "gui.it_starts_with_magic.spellbook_screen": "Spellbook"
 }
