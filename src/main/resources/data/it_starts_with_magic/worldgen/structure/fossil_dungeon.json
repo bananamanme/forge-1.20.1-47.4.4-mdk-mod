@@ -23,9 +23,7 @@
     "relative_to_start_of_surface": 0,
     "relative_to_start_of_liquid": 0
   },
-  "terrain_adaptation": "beard",
-
-  "liquid_settings": "ignore_waterlogging",
+  "terrain_adaptation": "beard_thin",
 
   "use_expansion_hack": false,
 
