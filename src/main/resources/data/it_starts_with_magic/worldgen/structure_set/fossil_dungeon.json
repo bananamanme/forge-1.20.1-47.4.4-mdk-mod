@@ -1,0 +1,17 @@
+{
+  "structures": [
+    {
+      "structure": "it_starts_with_magic:fossil_dungeon",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 5556,
+
+    "spacing": 20,
+
+    "separation": 6,
+
+    "type": "minecraft:random_spread"
+  }
+}
