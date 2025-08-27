@@ -1,73 +1,118 @@
 package net.bananaman.it_starts_with_magic.item.custom;
 
-import net.bananaman.it_starts_with_magic.mana.ManaHelper;
-import net.bananaman.it_starts_with_magic.mana.ManaProvider;
-import net.bananaman.it_starts_with_magic.mana.ManaSyncPacket;
-import net.bananaman.it_starts_with_magic.modstuff.SpellBookHolderProvider;
-import net.bananaman.it_starts_with_magic.networking.ModMessages;
-import net.bananaman.it_starts_with_magic.networking.packet.SpellbookSyncS2CPacket;
-import net.bananaman.it_starts_with_magic.particle.ModParticles;
-import net.bananaman.it_starts_with_magic.spells.BoomBeam;
-import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
+import net.bananaman.it_starts_with_magic.spells.Spell;
+
+import net.bananaman.it_starts_with_magic.spells.api.SpellRegistry;
 import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.AABB;
-import net.minecraft.world.phys.Vec3;
+import org.jetbrains.annotations.Nullable;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.SlotContext;
+import top.theillusivec4.curios.api.type.capability.ICurioItem;
+import top.theillusivec4.curios.api.type.capability.ICuriosItemHandler;
+import top.theillusivec4.curios.api.type.inventory.IDynamicStackHandler;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.Optional;
 
-public class TheSpellBook extends Item {
+public class TheSpellBook extends Item implements ICurioItem {
+
+    private static final String TAG_SELECTED_SPELL = "SelectedSpell";
+
     public TheSpellBook(Properties pProperties) {
         super(pProperties);
     }
 
-    @Override
-    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
-        ItemStack itemStack = pPlayer.getItemInHand(pUsedHand);
-
-        // Server-side logic only
-        if (!pLevel.isClientSide()) {
-
-            // Get the player's capability
-            pPlayer.getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(holder -> {
-                ItemStack equippedSpellbook = holder.getSpellbook();
-
-                // If the equipped slot is empty, equip the current spellbook
-                if (equippedSpellbook.isEmpty()) {
-                    holder.setSpellbook(itemStack.copy());
-                    pPlayer.setItemInHand(pUsedHand, ItemStack.EMPTY);
-                } else {
-                    // If the equipped slot is not empty, swap the items
-                    holder.setSpellbook(itemStack.copy());
-                    pPlayer.setItemInHand(pUsedHand, equippedSpellbook.copy());
-                }
-
-                // Synchronize the change to the client
-                if (pPlayer instanceof ServerPlayer serverPlayer) {
-                    ModMessages.sendToPlayer(new SpellbookSyncS2CPacket(holder.getSpellbook()), serverPlayer);
-                }
-            });
-        }
-
-        return InteractionResultHolder.success(itemStack);
+    public static Spell getSelectedSpell(ItemStack book) {
+        String id = book.getOrCreateTag().getString(TAG_SELECTED_SPELL);
+        return SpellRegistry.byId(id);
     }
 
+    public static void setSelectedSpell(ItemStack book, Spell spell) {
+        book.getOrCreateTag().putString(TAG_SELECTED_SPELL, spell.getId());
+    }
+
+    @Override
+    public void inventoryTick(ItemStack pStack, Level pLevel, Entity pEntity, int pSlotId, boolean pIsSelected) {
+        if (!pLevel.isClientSide && !pStack.getOrCreateTag().contains(TAG_SELECTED_SPELL)) {
+            setSelectedSpell(pStack, SpellRegistry.values().iterator().next());
+        }
+
+    }
+
+    @Override
+    public boolean canEquip(SlotContext slotContext, ItemStack stack) {
+        // Only players, only one spell-book at a time
+        return slotContext.entity() instanceof net.minecraft.world.entity.player.Player
+                && !CuriosApi.getCuriosHelper().findEquippedCurio(this, slotContext.entity()).isPresent();
+    }
+
+
+    @Override
+    public boolean canUnequip(SlotContext slotContext, ItemStack stack) {
+        return true;
+    }
+
+
+    @Override
+    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+        ItemStack held = pPlayer.getItemInHand(pUsedHand);
+
+        // only on server side
+        if (!pLevel.isClientSide) {
+            Optional<ICuriosItemHandler> opt = CuriosApi.getCuriosHelper()
+                    .getCuriosHandler(pPlayer).resolve();
+            if (opt.isPresent()) {
+                ICuriosItemHandler handler = opt.get();
+                // look for any slot that accepts the spellbook
+                for (String id : handler.getCurios().keySet()) {
+                    IDynamicStackHandler stacks = handler.getCurios().get(id).getStacks();
+                    for (int i = 0; i < stacks.getSlots(); i++) {
+                        if (stacks.getStackInSlot(i).isEmpty()
+                                && stacks.isItemValid(i, held)) {
+                            // insert and shrink the held stack
+                            stacks.setStackInSlot(i, held.copyWithCount(1));
+                            held.shrink(1);
+                            pPlayer.swing(pUsedHand);
+                            return InteractionResultHolder.sidedSuccess(held, pLevel.isClientSide);
+                        }
+                    }
+                }
+            }
+        }
+        return InteractionResultHolder.pass(held);
+    }
+
+
+    @Override
+    public void onEquip(SlotContext slotContext, ItemStack prevStack, ItemStack stack) {
+        slotContext.entity().level().playSound(
+                null,
+                slotContext.entity().blockPosition(),
+                SoundEvents.BOOK_PAGE_TURN,
+                SoundSource.PLAYERS,
+                0.8F, 1.0F
+        );
+    }
+
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level level,
+                                List<Component> lines, TooltipFlag flag) {
+        Spell s = TheSpellBook.getSelectedSpell(stack);
+        if (s == null) {                       // ← safety check
+            lines.add(Component.translatable("spell.none_selected"));
+            return;
+        }
+        lines.add(Component.translatable("spell.selected",
+                Component.translatable(s.getDisplayName())));
+    }
 }

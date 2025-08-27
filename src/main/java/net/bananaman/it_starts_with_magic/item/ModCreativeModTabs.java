@@ -14,7 +14,7 @@ public class ModCreativeModTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MOD_TABS =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ItStartsWithMagicMod.MOD_ID);
     public static final RegistryObject<CreativeModeTab> IT_STARTS_WITH_MAGIC_TAB = CREATIVE_MOD_TABS.register("it_starts_with_magic_tab",
-            ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.THESPELLBOOK.get()))
+            ()-> CreativeModeTab.builder().icon(()-> new ItemStack(ModItems.SPELLSHARD.get()))
                     .title(Component.translatable("creativetab.it_starts_with_magic_tab"))
                     .displayItems((itemDisplayParameters, output) -> {
 

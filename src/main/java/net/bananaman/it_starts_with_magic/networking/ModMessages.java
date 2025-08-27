@@ -3,20 +3,18 @@ package net.bananaman.it_starts_with_magic.networking;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.mana.ManaSyncPacket;
 import net.bananaman.it_starts_with_magic.mana.NotEnoughManaPacket;
-import net.bananaman.it_starts_with_magic.networking.packet.CastSpellC2SPacket;
-import net.bananaman.it_starts_with_magic.networking.packet.OpenSpellbookGUIC2SPacket;
-import net.bananaman.it_starts_with_magic.networking.packet.SpellbookSyncS2CPacket;
-import net.bananaman.it_starts_with_magic.networking.packet.UnEquipSpellbookC2SPacket;
+import net.bananaman.it_starts_with_magic.networking.packet.CastSpellPacket;
+import net.bananaman.it_starts_with_magic.networking.packet.CycleSpellPacket;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.network.NetworkRegistry;
 import net.minecraftforge.network.PacketDistributor;
 import net.minecraftforge.network.simple.SimpleChannel;
 
 public class ModMessages {
-    private static SimpleChannel INSTANCE;
-    private static int packetId = 0;
+    public static SimpleChannel INSTANCE;
+    public static int packetId = 0;
 
-    private static int id() {
+    public static int id() {
         return packetId++;
     }
 
@@ -32,10 +30,9 @@ public class ModMessages {
 
         net.registerMessage(id(), ManaSyncPacket.class, ManaSyncPacket::toBytes, ManaSyncPacket::new, ManaSyncPacket::handle);
         net.registerMessage(id(), NotEnoughManaPacket.class, NotEnoughManaPacket::toBytes, NotEnoughManaPacket::new, NotEnoughManaPacket::handle);
-        net.registerMessage(id(), SpellbookSyncS2CPacket.class, SpellbookSyncS2CPacket::toBytes, SpellbookSyncS2CPacket::new, SpellbookSyncS2CPacket::handle);
-        net.registerMessage(id(), CastSpellC2SPacket.class, CastSpellC2SPacket::toBytes, CastSpellC2SPacket::new, CastSpellC2SPacket::handle);
-        net.registerMessage(id(), UnEquipSpellbookC2SPacket.class, UnEquipSpellbookC2SPacket::toBytes, UnEquipSpellbookC2SPacket::new, UnEquipSpellbookC2SPacket::handle);
-        net.registerMessage(id(), OpenSpellbookGUIC2SPacket.class, OpenSpellbookGUIC2SPacket::toBytes, OpenSpellbookGUIC2SPacket::new, OpenSpellbookGUIC2SPacket::handle);
+        net.registerMessage(id(), CastSpellPacket.class, CastSpellPacket::encode, CastSpellPacket::decode, CastSpellPacket::handle);
+        CycleSpellPacket.register();
+
     }
 
     public static <MSG> void sendToPlayer(MSG message, net.minecraft.server.level.ServerPlayer player) {

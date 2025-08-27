@@ -2,7 +2,7 @@ package net.bananaman.it_starts_with_magic.datagen;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.item.ModItems;
-import net.bananaman.it_starts_with_magic.loot.AddItemModifier;
+import net.bananaman.it_starts_with_magic.modloot.AddItemModifier;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.storage.loot.predicates.LootItemCondition;

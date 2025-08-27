@@ -1,4 +1,4 @@
-package net.bananaman.it_starts_with_magic.loot;
+package net.bananaman.it_starts_with_magic.modloot;
 
 import com.mojang.serialization.Codec;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;

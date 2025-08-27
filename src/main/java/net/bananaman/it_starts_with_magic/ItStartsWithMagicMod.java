@@ -1,29 +1,26 @@
 package net.bananaman.it_starts_with_magic;
 
 
-import com.mojang.blaze3d.platform.InputConstants;
 import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
+import net.bananaman.it_starts_with_magic.compact.Curios;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
-import net.bananaman.it_starts_with_magic.loot.ModLootModifiers;
+import net.bananaman.it_starts_with_magic.modloot.ModLootModifiers;
 import net.bananaman.it_starts_with_magic.mana.ManaOverlay;
 import net.bananaman.it_starts_with_magic.networking.ModMessages;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.particle.ModSonicBoomParticle;
 import net.bananaman.it_starts_with_magic.recipe.ModRecipes;
 import net.bananaman.it_starts_with_magic.screen.ModMenuTypes;
-import net.bananaman.it_starts_with_magic.screen.SpellBookScreen;
 import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
-import net.minecraft.client.KeyMapping;
+import net.bananaman.it_starts_with_magic.spells.api.SpellRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -35,8 +32,9 @@ import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import org.lwjgl.glfw.GLFW;
 import org.slf4j.Logger;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ItStartsWithMagicMod.MOD_ID)
@@ -60,6 +58,9 @@ public class ItStartsWithMagicMod
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        SpellRegistry.values();
+
+
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -74,8 +75,13 @@ public class ItStartsWithMagicMod
 
 
 
+
+
     private void commonSetup(final FMLCommonSetupEvent event)
     {
+        Curios.registerCurioSlot(Curios.RING_SLOT, 2, false, null);
+        Curios.registerCurioSlot(Curios.SPELLBOOK_SLOT, 1, false, ResourceLocation.parse("curios:slot/spellbook_slot"));
+
     }
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
@@ -93,7 +99,6 @@ public class ItStartsWithMagicMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.THE_ENTITY_BLOCK_MENU.get(), TheEntityBlockScreen::new);
-            MenuScreens.register(ModMenuTypes.SPELLBOOK_MENU.get(), SpellBookScreen::new);
 
             ModMessages.register();
 

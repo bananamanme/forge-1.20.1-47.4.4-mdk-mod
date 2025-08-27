@@ -56,5 +56,16 @@
   "key.category.it_starts_with_magic.magic" : "It Starts With Magic",
   "key..it_starts_with_magic.magic.cast_spell" : "Spell Cast",
 
-  "gui.it_starts_with_magic.spellbook_screen": "Spellbook"
+  "curios.identifier.spellbook": "Spell Book",
+  "curios.modifiers.spellbook": "When equipped as Spell Book:",
+
+  "gui.it_starts_with_magic.spellbook_screen": "Spellbook",
+
+
+  "spell.selected": "Selected: %s",
+  "spell.none_selected": "No spell selected",
+
+
+  "spell.sonic_boom": "Sonic Boom",
+  "spell.fire_beam": "Fire Beam"
 }

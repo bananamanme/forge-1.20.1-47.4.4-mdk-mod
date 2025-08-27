@@ -4,6 +4,7 @@ import net.bananaman.it_starts_with_magic.mana.ManaHelper;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
 import net.bananaman.it_starts_with_magic.spells.spellcooldowns.SpellCooldownProvider;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.damagesource.DamageSource;
@@ -17,11 +18,18 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class BoomBeam {
+public class BoomBeam implements Spell {
 
     public static final String SPELL_ID = "sonic_boom";
     public static final int MANA_COST = 20;
     public static final int COOLDOWN_TICKS = 40;
+
+    @Override public String getId() { return SPELL_ID; }
+
+    @Override
+    public void cast(ServerPlayer player) {
+        BoomBeam.castSpell(player.level(), player);
+    }
 
     public static void castSpell(Level level, Player player) {
         if (level.isClientSide) {

@@ -6,6 +6,8 @@ import net.bananaman.it_starts_with_magic.mana.ManaProvider;
 import net.bananaman.it_starts_with_magic.spells.spellcooldowns.SpellCooldownProvider;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +20,7 @@ public class ModCapabilities {
     @SubscribeEvent
     public static void  onRegisterCapabilities(RegisterCapabilitiesEvent event){
         event.register(IMana.class);
-        event.register(ISpellbookHolder.class);
+
     }
 
     @SubscribeEvent
@@ -26,10 +28,7 @@ public class ModCapabilities {
         if (event.getObject() instanceof Player) {
             event.addCapability(new ResourceLocation("it_starts_with_magic","mana"),new ManaProvider());
             event.addCapability(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "spell_cooldown"), new SpellCooldownProvider());
-            event.addCapability(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "spellbook_holder"), new SpellBookHolderProvider());
         }
     }
-
-
 
 }

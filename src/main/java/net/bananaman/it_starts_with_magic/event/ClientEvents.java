@@ -1,16 +1,14 @@
 package net.bananaman.it_starts_with_magic.event;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
-import net.bananaman.it_starts_with_magic.modstuff.SpellBookHolderProvider;
+import net.bananaman.it_starts_with_magic.item.custom.TheSpellBook;
 import net.bananaman.it_starts_with_magic.networking.ModMessages;
-import net.bananaman.it_starts_with_magic.networking.packet.CastSpellC2SPacket;
-import net.bananaman.it_starts_with_magic.networking.packet.OpenSpellbookGUIC2SPacket;
-import net.bananaman.it_starts_with_magic.screen.gui.SpellbookContainer;
+import net.bananaman.it_starts_with_magic.networking.packet.CastSpellPacket;
+import net.bananaman.it_starts_with_magic.networking.packet.CycleSpellPacket;
+import net.bananaman.it_starts_with_magic.spells.BoomBeam;
 import net.bananaman.it_starts_with_magic.util.keyBinding;
 import net.minecraft.client.Minecraft;
-import net.minecraft.network.chat.Component;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.SimpleMenuProvider;
+import net.minecraft.client.player.LocalPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,7 +16,8 @@ import net.minecraftforge.client.event.InputEvent;
 import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.network.NetworkHooks;
+
+
 
 public class ClientEvents {
     @Mod.EventBusSubscriber(modid = ItStartsWithMagicMod.MOD_ID, value = Dist.CLIENT)
@@ -27,28 +26,39 @@ public class ClientEvents {
         public static void onKeyRegister(RegisterKeyMappingsEvent event) {
             event.register(keyBinding.CASTING_KEY);
             event.register(keyBinding.OPEN_GUI_KEY);
+            event.register(keyBinding.NEXT_SPELL_KEY);
 
         }
         @SubscribeEvent
         public static void onKeyInput(InputEvent.Key event) {
-            if (keyBinding.OPEN_GUI_KEY.consumeClick()) {
-                ModMessages.sendToServer(new OpenSpellbookGUIC2SPacket());
+            Player player = Minecraft.getInstance().player;
+            if (keyBinding.NEXT_SPELL_KEY.consumeClick()) {
+                if (player != null){
+                    ModMessages.INSTANCE.sendToServer(new CycleSpellPacket(true));
+                }
             }
 
 
             if (keyBinding.CASTING_KEY.consumeClick()) {
-                Player player = Minecraft.getInstance().player;
                 if (player != null) {
-                    // Check if the player has a spellbook equipped in the custom slot
-                    player.getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(holder -> {
-                        ItemStack equippedSpellbook = holder.getSpellbook();
-                        // If a spellbook is equipped, send a packet to the server to cast the spell
-                        if (!equippedSpellbook.isEmpty()) {
-                            ModMessages.sendToServer(new CastSpellC2SPacket());
-                        }
-                    });
+                    ModMessages.INSTANCE.sendToServer(new CastSpellPacket(BoomBeam.SPELL_ID));
                 }
             }
         }
+    }
+
+
+    @SubscribeEvent
+    public static void onScroll(InputEvent.MouseScrollingEvent evt) {
+        LocalPlayer player = Minecraft.getInstance().player;
+        if (player == null || !player.isShiftKeyDown()) return;
+
+        ItemStack held = player.getMainHandItem();
+        if (!(held.getItem() instanceof TheSpellBook)) return;
+
+        // send one packet to server: "cycle forward or backward"
+        boolean forward = evt.getScrollDelta() > 0;
+        ModMessages.INSTANCE.sendToServer(new CycleSpellPacket(forward));
+        evt.setCanceled(true);        // stop normal item switching
     }
 }

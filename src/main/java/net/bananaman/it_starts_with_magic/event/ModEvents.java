@@ -1,24 +1,26 @@
 package net.bananaman.it_starts_with_magic.event;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
-import net.bananaman.it_starts_with_magic.mana.Mana;
 import net.bananaman.it_starts_with_magic.mana.ManaProvider;
 import net.bananaman.it_starts_with_magic.mana.ManaSyncPacket;
-import net.bananaman.it_starts_with_magic.modstuff.SpellBookHolderProvider;
 import net.bananaman.it_starts_with_magic.networking.ModMessages;
-import net.bananaman.it_starts_with_magic.networking.packet.SpellbookSyncS2CPacket;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-
-import net.minecraftforge.event.entity.player.PlayerEvent.Clone;
+import top.theillusivec4.curios.api.CuriosApi;
+import top.theillusivec4.curios.api.event.CurioEquipEvent;
 
 @Mod.EventBusSubscriber(modid = ItStartsWithMagicMod.MOD_ID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public class ModEvents {
     @SubscribeEvent
     public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
+        ServerPlayer player = (ServerPlayer) event.getEntity();
+
+
+
         if (!event.getEntity().level().isClientSide) {
             event.getEntity().getCapability(ManaProvider.MANA_CAPABILITY).ifPresent(mana -> {
                 if (mana.getMana() == 0) {
@@ -27,11 +29,7 @@ public class ModEvents {
                 ModMessages.sendToPlayer(new ManaSyncPacket(mana.getMana()), (ServerPlayer) event.getEntity());
             });
         }
-        if (event.getEntity() instanceof ServerPlayer serverPlayer) {
-            serverPlayer.getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(holder -> {
-                ModMessages.sendToPlayer(new SpellbookSyncS2CPacket(holder.getSpellbook()), serverPlayer);
-            });
-        }
+
     }
 
     @SubscribeEvent
@@ -45,11 +43,7 @@ public class ModEvents {
                                 });
                     });
 
-            event.getOriginal().getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(oldHolder -> {
-                event.getEntity().getCapability(SpellBookHolderProvider.SPELLBOOK_HOLDER_CAPABILITY).ifPresent(newHolder -> {
-                    newHolder.setSpellbook(oldHolder.getSpellbook().copy());
-                });
-            });
+
         }
     }
 
@@ -66,6 +60,5 @@ public class ModEvents {
             });
         }
     }
-
 
 }

@@ -1,7 +1,6 @@
 package net.bananaman.it_starts_with_magic.screen;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
-import net.bananaman.it_starts_with_magic.screen.gui.SpellbookContainer;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.MenuType;
 import net.minecraftforge.common.extensions.IForgeMenuType;
@@ -18,8 +17,6 @@ public class ModMenuTypes {
     public static final RegistryObject<MenuType<TheEntityBlockMenu>> THE_ENTITY_BLOCK_MENU =
             registerManuType("the_entity_block_menu",TheEntityBlockMenu::new);
 
-    public static final RegistryObject<MenuType<SpellbookContainer>> SPELLBOOK_MENU = MENUS.register("spellbook_menu",
-            () -> IForgeMenuType.create(((pContainerId, pInventory, pBuffer) -> new SpellbookContainer(pContainerId, pInventory))));
 
 
     private static <T extends AbstractContainerMenu>RegistryObject<MenuType<T>> registerManuType(String name, IContainerFactory<T> factory){
