@@ -10,6 +10,10 @@ public class ManaHelper {
         if (player.level().isClientSide) {
             return false;
         }
+        if (player.isCreative()) {
+            action.run();
+            return true;
+        }
 
         return player.getCapability(ManaProvider.MANA_CAPABILITY).map(mana -> {
             if (mana.consumeMana(manaCost)) {

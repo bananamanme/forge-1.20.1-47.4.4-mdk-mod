@@ -20,7 +20,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
 public class ThePedestalBlock extends BaseEntityBlock {
-    public static final VoxelShape SHAPE = ThePedestalBlock.box(2,0,2,14,13,14);
+    public static final VoxelShape SHAPE = ThePedestalBlock.box(0,0,0,16,16,16);
 
 
     public ThePedestalBlock(Properties pProperties) {

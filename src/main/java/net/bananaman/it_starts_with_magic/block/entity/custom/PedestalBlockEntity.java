@@ -42,7 +42,7 @@ public class PedestalBlockEntity extends BlockEntity {
     private float position;
     private float the_x =1;
     public float getRenderRotation(){
-        rotation +=0.5;
+        rotation +=0.7;
         if (rotation>=360) {
             rotation =0;
         }
