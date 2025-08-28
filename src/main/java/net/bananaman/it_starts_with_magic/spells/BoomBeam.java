@@ -2,7 +2,7 @@ package net.bananaman.it_starts_with_magic.spells;
 
 import net.bananaman.it_starts_with_magic.mana.ManaHelper;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
-import net.bananaman.it_starts_with_magic.spells.spellcooldowns.SpellCooldownProvider;
+import net.bananaman.it_starts_with_magic.spells.api.spellcooldowns.SpellCooldownProvider;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;

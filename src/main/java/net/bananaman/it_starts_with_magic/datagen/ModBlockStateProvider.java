@@ -47,6 +47,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.THE_ENTITY_BLOCK.get(),
                 new ModelFile.UncheckedModelFile(modLoc("block/the_entity_block")));
 
+        simpleBlockWithItem(ModBlocks.THE_PEDESTAL_BLOCK.get(),
+                new ModelFile.UncheckedModelFile(modLoc("block/the_pedestal_block")));
+
 
         stairsBlock(((StairBlock) ModBlocks.PEll_STAIRS.get()), blockTexture(ModBlocks.PEll.get()));
         stairsBlock(((StairBlock) ModBlocks.TUFF_STAIRS.get()), blockTexture(Blocks.TUFF));

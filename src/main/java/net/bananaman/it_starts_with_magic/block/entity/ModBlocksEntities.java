@@ -2,6 +2,8 @@ package net.bananaman.it_starts_with_magic.block.entity;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
+import net.bananaman.it_starts_with_magic.block.custom.ThePedestalBlock;
+import net.bananaman.it_starts_with_magic.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -17,6 +19,11 @@ public class ModBlocksEntities {
             BLOCK_ENTITIES.register("the_entity_block_be",()->
                     BlockEntityType.Builder.of(TheEntityBlockBlockEntity::new,
                             ModBlocks.THE_ENTITY_BLOCK.get()).build(null));
+
+    public static final RegistryObject<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
+            BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
+                    PedestalBlockEntity::new, ModBlocks.THE_PEDESTAL_BLOCK.get()
+            ).build(null));
 
 
 

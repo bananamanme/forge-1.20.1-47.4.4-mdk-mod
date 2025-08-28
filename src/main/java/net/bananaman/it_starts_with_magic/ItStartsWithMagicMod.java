@@ -4,6 +4,7 @@ package net.bananaman.it_starts_with_magic;
 import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
+import net.bananaman.it_starts_with_magic.block.entity.renderer.ThePedestalBlockEntityRenderer;
 import net.bananaman.it_starts_with_magic.compact.Curios;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
@@ -20,6 +21,7 @@ import net.bananaman.it_starts_with_magic.spells.api.SpellRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.client.event.RegisterGuiOverlaysEvent;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
@@ -115,8 +117,7 @@ public class ItStartsWithMagicMod
         public static void registerParticleProvider(RegisterParticleProvidersEvent event){
             event.registerSpriteSet(ModParticles.MODSONICBOOMPARTICLE.get(), ModSonicBoomParticle.Provider::new);
 
-
-
         }
+
     }
 }

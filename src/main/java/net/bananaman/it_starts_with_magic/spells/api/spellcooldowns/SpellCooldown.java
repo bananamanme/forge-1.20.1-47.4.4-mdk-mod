@@ -1,4 +1,4 @@
-package net.bananaman.it_starts_with_magic.spells.spellcooldowns;
+package net.bananaman.it_starts_with_magic.spells.api.spellcooldowns;
 
 import java.util.HashMap;
 import java.util.Map;

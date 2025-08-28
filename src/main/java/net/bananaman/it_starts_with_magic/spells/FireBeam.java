@@ -2,7 +2,7 @@ package net.bananaman.it_starts_with_magic.spells;
 
 import net.bananaman.it_starts_with_magic.mana.ManaHelper;
 import net.bananaman.it_starts_with_magic.particle.ModParticles;
-import net.bananaman.it_starts_with_magic.spells.spellcooldowns.SpellCooldownProvider;
+import net.bananaman.it_starts_with_magic.spells.api.spellcooldowns.SpellCooldownProvider;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -12,7 +12,6 @@ import net.minecraft.util.Mth;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 
 public class FireBeam implements Spell {

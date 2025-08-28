@@ -1,6 +1,7 @@
 package net.bananaman.it_starts_with_magic.block;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.block.custom.TheEntityBlock;
+import net.bananaman.it_starts_with_magic.block.custom.ThePedestalBlock;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -20,6 +21,10 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> PEll = registerBlock("pell",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).sound(SoundType.AMETHYST).strength(6).requiresCorrectToolForDrops()));
+
+    public static final RegistryObject<Block> THE_PEDESTAL_BLOCK = registerBlock("the_pedestal_block",
+            () -> new ThePedestalBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).sound(SoundType.AMETHYST).strength(6).requiresCorrectToolForDrops().noOcclusion()));
+
 
     public static final RegistryObject<Block> PEll_SLAB = registerBlock("pell_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.GLOWSTONE).sound(SoundType.AMETHYST).strength(6).requiresCorrectToolForDrops()));

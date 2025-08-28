@@ -34,6 +34,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.PEll_SLAB.get());
                         output.accept(ModBlocks.PEll_STAIRS.get());
                         output.accept(ModBlocks.THE_ENTITY_BLOCK.get());
+                        output.accept(ModBlocks.THE_PEDESTAL_BLOCK.get());
                         output.accept(ModBlocks.RUBY_ORE.get());
                         output.accept(ModBlocks.DEEPSLATE_RUBY_ORE.get());
                         output.accept(ModBlocks.RUBY_BLOCK.get());
@@ -54,6 +55,7 @@ public class ModCreativeModTabs {
                         output.accept(ModBlocks.POLISHED_TUFF_SLAB.get());
                         output.accept(ModBlocks.POLISHED_TUFF_STAIRS.get());
                         output.accept(ModBlocks.POLISHED_TUFF_WALL.get());
+
 
                     })
 

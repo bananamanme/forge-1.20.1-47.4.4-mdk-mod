@@ -1,4 +1,4 @@
-// 1.20.1	2025-08-15T16:17:44.5663046	Loot Tables
+// 1.20.1	2025-08-28T07:08:52.4299271	Loot Tables
 12648febb7294088ace3fd5cc507f3a7a5ccea1d data/it_starts_with_magic/loot_tables/blocks/ametrine_ore.json
 992c136dfdc7f5999223f5bf0f6cc325e88e6b21 data/it_starts_with_magic/loot_tables/blocks/azurite_ore.json
 98652772487c126e8acd1076a0583393a078d80a data/it_starts_with_magic/loot_tables/blocks/chiseled_tuff.json
@@ -17,6 +17,7 @@ a260beac6316848e546d6ac57eae278ebefd1620 data/it_starts_with_magic/loot_tables/b
 fcc61e1994a98cfbff4bdf9d7c4440b3a58772a4 data/it_starts_with_magic/loot_tables/blocks/ruby_block.json
 908bd658aa8ae6de46d308bb02270368d639e38c data/it_starts_with_magic/loot_tables/blocks/ruby_ore.json
 229011b1d3acdd4247d4bee48601a87b17d4d005 data/it_starts_with_magic/loot_tables/blocks/the_entity_block.json
+318334142d2d201e33a05a4d751666c20d54981d data/it_starts_with_magic/loot_tables/blocks/the_pedestal_block.json
 7dc75eb9cf8cd46d25f7adf71057d48c07f593d8 data/it_starts_with_magic/loot_tables/blocks/tuff_bricks.json
 3ef55ea0995caceee3284ad90677b6e4d8ad4545 data/it_starts_with_magic/loot_tables/blocks/tuff_brick_slab.json
 7a633c59b956a49344ed57a64eaee49139033adf data/it_starts_with_magic/loot_tables/blocks/tuff_brick_stairs.json

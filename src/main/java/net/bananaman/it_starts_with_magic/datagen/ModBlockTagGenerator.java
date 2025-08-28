@@ -28,7 +28,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.AMETRINE_ORE.get(),
                         ModBlocks.DEEPSLATE_AMETRINE_ORE.get(),
                         ModBlocks.AZURITE_ORE.get(),
-                        ModBlocks.DEEPSLATE_AZURITE_ORE.get()
+                        ModBlocks.DEEPSLATE_AZURITE_ORE.get(),
+                        ModBlocks.THE_PEDESTAL_BLOCK.get()
                 );
 
         this.tag(BlockTags.MINEABLE_WITH_PICKAXE)
@@ -49,7 +50,8 @@ public class ModBlockTagGenerator extends BlockTagsProvider {
                         ModBlocks.CHISELED_TUFF_BRICKS.get(),
                         ModBlocks.POLISHED_TUFF.get(),
                         ModBlocks.POLISHED_TUFF_SLAB.get(),
-                        ModBlocks.POLISHED_TUFF_STAIRS.get()
+                        ModBlocks.POLISHED_TUFF_STAIRS.get(),
+                        ModBlocks.THE_ENTITY_BLOCK.get()
                 );
 
         this.tag(BlockTags.WALLS)

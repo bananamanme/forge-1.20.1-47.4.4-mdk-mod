@@ -29,6 +29,7 @@ public class ModBlocksLootTables extends BlockLootSubProvider {
         this.dropSelf(ModBlocks.PEll_STAIRS.get());
         this.dropSelf(ModBlocks.PEll_WALL.get());
         this.dropSelf(ModBlocks.THE_ENTITY_BLOCK.get());
+        this.dropSelf(ModBlocks.THE_PEDESTAL_BLOCK.get());
         this.dropSelf(ModBlocks.RUBY_BLOCK.get());
         this.dropSelf(ModBlocks.TUFF_STAIRS.get());
         this.dropSelf(ModBlocks.TUFF_WALL.get());

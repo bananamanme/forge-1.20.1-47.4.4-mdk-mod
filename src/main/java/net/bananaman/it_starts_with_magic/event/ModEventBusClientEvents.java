@@ -3,6 +3,7 @@ package net.bananaman.it_starts_with_magic.event;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
 import net.bananaman.it_starts_with_magic.block.entity.renderer.TheEntityBlockBlockEntityRenderer;
+import net.bananaman.it_starts_with_magic.block.entity.renderer.ThePedestalBlockEntityRenderer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,5 +19,6 @@ public class ModEventBusClientEvents {
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlocksEntities.THE_BLOCK_ENTITY_BE.get(), TheEntityBlockBlockEntityRenderer::new);
+        event.registerBlockEntityRenderer(ModBlocksEntities.PEDESTAL_BE.get(), ThePedestalBlockEntityRenderer::new);
     }
 }

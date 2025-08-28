@@ -17,6 +17,7 @@
     "it_starts_with_magic:chiseled_tuff_bricks",
     "it_starts_with_magic:polished_tuff",
     "it_starts_with_magic:polished_tuff_slab",
-    "it_starts_with_magic:polished_tuff_stairs"
+    "it_starts_with_magic:polished_tuff_stairs",
+    "it_starts_with_magic:the_entity_block"
   ]
 }
