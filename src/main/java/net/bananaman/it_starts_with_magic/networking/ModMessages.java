@@ -33,7 +33,12 @@ public class ModMessages {
         net.registerMessage(id(), CastSpellPacket.class, CastSpellPacket::encode, CastSpellPacket::decode, CastSpellPacket::handle);
         CycleSpellPacket.register();
 
+
+
+
+
     }
+
 
     public static <MSG> void sendToPlayer(MSG message, net.minecraft.server.level.ServerPlayer player) {
         INSTANCE.send(PacketDistributor.PLAYER.with(() -> player), message);

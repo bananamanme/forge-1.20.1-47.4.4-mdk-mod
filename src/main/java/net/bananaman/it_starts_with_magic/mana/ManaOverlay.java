@@ -56,7 +56,7 @@ public class ManaOverlay {
                 int spellWidth = mc.font.width(localized);
                 int spellX = x + (BAR_WIDTH / 2) - (spellWidth / 2);
                 int spellY = y + BAR_HEIGHT + 1;
-                guiGraphics.drawString(mc.font, localized, spellX, spellY, 0x00008B, true);
+                guiGraphics.drawString(mc.font, localized, spellX, spellY, 0xFFFFFF, true);
             }
         });
 

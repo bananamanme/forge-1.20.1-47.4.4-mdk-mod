@@ -4,8 +4,11 @@ package net.bananaman.it_starts_with_magic;
 import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
-import net.bananaman.it_starts_with_magic.block.entity.renderer.ThePedestalBlockEntityRenderer;
 import net.bananaman.it_starts_with_magic.compact.Curios;
+import net.bananaman.it_starts_with_magic.entity.MagicBulletEntity;
+import net.bananaman.it_starts_with_magic.entity.ModEntityTypes;
+import net.bananaman.it_starts_with_magic.entity.models.MagicBulletModel;
+import net.bananaman.it_starts_with_magic.entity.renderer.MagicBulletRenderer;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.bananaman.it_starts_with_magic.modloot.ModLootModifiers;
@@ -19,6 +22,8 @@ import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
 import net.bananaman.it_starts_with_magic.spells.api.SpellRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.model.geom.ModelLayerLocation;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -35,8 +40,6 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
-import top.theillusivec4.curios.api.CuriosApi;
-import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ItStartsWithMagicMod.MOD_ID)
@@ -60,9 +63,10 @@ public class ItStartsWithMagicMod
         ModMenuTypes.register(modEventBus);
         ModRecipes.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModEntityTypes.register(modEventBus);
+
+
         SpellRegistry.values();
-
-
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
@@ -101,6 +105,8 @@ public class ItStartsWithMagicMod
         public static void onClientSetup(FMLClientSetupEvent event)
         {
             MenuScreens.register(ModMenuTypes.THE_ENTITY_BLOCK_MENU.get(), TheEntityBlockScreen::new);
+            EntityRenderers.register(ModEntityTypes.MAGIC_BULLET.get(), MagicBulletRenderer::new);
+
 
             ModMessages.register();
 
@@ -116,6 +122,16 @@ public class ItStartsWithMagicMod
         @SubscribeEvent
         public static void registerParticleProvider(RegisterParticleProvidersEvent event){
             event.registerSpriteSet(ModParticles.MODSONICBOOMPARTICLE.get(), ModSonicBoomParticle.Provider::new);
+
+        }
+        @SubscribeEvent
+        public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerEntityRenderer(ModEntityTypes.MAGIC_BULLET.get(), MagicBulletRenderer::new);
+        }
+
+        @SubscribeEvent
+        public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+            event.registerLayerDefinition(MagicBulletModel.LAYER_LOCATION, MagicBulletModel::createBodyLayer);
 
         }
 

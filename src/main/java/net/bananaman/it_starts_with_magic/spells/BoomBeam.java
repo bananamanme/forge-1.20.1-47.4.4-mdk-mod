@@ -20,11 +20,10 @@ import java.util.Set;
 
 public class BoomBeam implements Spell {
 
-    public static final String SPELL_ID = "sonic_boom";
+    public static final String SPELL_ID = "boom_beam";
     public static final int MANA_COST = 20;
     public static final int COOLDOWN_TICKS = 40;
 
-    public static final float SELF_DAMAGE =5f;
 
     @Override public String getId() { return SPELL_ID; }
 
@@ -59,8 +58,6 @@ public class BoomBeam implements Spell {
     }
 
     private static void shootSonicBoom(Level level, Player player) {
-
-        player.hurt(player.damageSources().sonicBoom(player),5);
         if (level instanceof ServerLevel serverLevel) {
             Vec3 playerLook = player.getLookAngle();
             Vec3 startPos = player.getEyePosition();
