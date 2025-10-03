@@ -71,5 +71,7 @@
 
 
   "spell.boom_beam": "Boom Beam",
-  "spell.fire_beam": "Fire Beam"
+  "spell.fire_beam": "Fire Beam",
+  "spell.magic_bullet": "Magic Bullet",
+  "spell.sacrifice_arrow": "Sacrifice Arrow"
 }

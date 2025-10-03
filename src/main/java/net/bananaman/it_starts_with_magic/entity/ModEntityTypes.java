@@ -1,6 +1,8 @@
 package net.bananaman.it_starts_with_magic.entity;
 
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
+import net.bananaman.it_starts_with_magic.entity.entities.MagicBulletEntity;
+import net.bananaman.it_starts_with_magic.entity.entities.SacrificeArrowEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -19,6 +21,12 @@ public class ModEntityTypes {
                     () -> EntityType.Builder.<MagicBulletEntity>of(MagicBulletEntity::new, MobCategory.MISC)
                             .sized(0.5F, 0.5F) // Hitbox size
                             .build(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "magic_bullet").toString()));
+
+    public static final RegistryObject<EntityType<SacrificeArrowEntity>> SACRIFICE_ARROW =
+            ENTITY_TYPES.register("sacrifice_arrow",
+                    () -> EntityType.Builder.<SacrificeArrowEntity>of(SacrificeArrowEntity::new, MobCategory.MISC)
+                            .sized(0.5F, 0.5F) // Hitbox size
+                            .build(new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "sacrifice_arrow").toString()));
 
 
     public static void register(IEventBus eventBus) {

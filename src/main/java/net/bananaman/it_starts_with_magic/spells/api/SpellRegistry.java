@@ -1,9 +1,6 @@
 package net.bananaman.it_starts_with_magic.spells.api;
 
-import net.bananaman.it_starts_with_magic.spells.BoomBeam;
-import net.bananaman.it_starts_with_magic.spells.FireBeam;
-import net.bananaman.it_starts_with_magic.spells.MagicBullet;
-import net.bananaman.it_starts_with_magic.spells.Spell;
+import net.bananaman.it_starts_with_magic.spells.*;
 
 import java.util.Collection;
 import java.util.LinkedHashMap;
@@ -24,5 +21,6 @@ public final class SpellRegistry {
         register(new BoomBeam());
         register(new FireBeam());
         register(new MagicBullet());
+        register(new SacrificeArrow());
     }
 }

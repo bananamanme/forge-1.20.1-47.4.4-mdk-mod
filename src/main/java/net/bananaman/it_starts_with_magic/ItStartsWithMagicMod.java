@@ -5,10 +5,11 @@ import com.mojang.logging.LogUtils;
 import net.bananaman.it_starts_with_magic.block.ModBlocks;
 import net.bananaman.it_starts_with_magic.block.entity.ModBlocksEntities;
 import net.bananaman.it_starts_with_magic.compact.Curios;
-import net.bananaman.it_starts_with_magic.entity.MagicBulletEntity;
 import net.bananaman.it_starts_with_magic.entity.ModEntityTypes;
 import net.bananaman.it_starts_with_magic.entity.models.MagicBulletModel;
+import net.bananaman.it_starts_with_magic.entity.models.SacrificeArrowModel;
 import net.bananaman.it_starts_with_magic.entity.renderer.MagicBulletRenderer;
+import net.bananaman.it_starts_with_magic.entity.renderer.SacrificeArrowRenderer;
 import net.bananaman.it_starts_with_magic.item.ModCreativeModTabs;
 import net.bananaman.it_starts_with_magic.item.ModItems;
 import net.bananaman.it_starts_with_magic.modloot.ModLootModifiers;
@@ -22,7 +23,6 @@ import net.bananaman.it_starts_with_magic.screen.TheEntityBlockScreen;
 import net.bananaman.it_starts_with_magic.sound.ModSounds;
 import net.bananaman.it_starts_with_magic.spells.api.SpellRegistry;
 import net.minecraft.client.gui.screens.MenuScreens;
-import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -127,11 +127,13 @@ public class ItStartsWithMagicMod
         @SubscribeEvent
         public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
             event.registerEntityRenderer(ModEntityTypes.MAGIC_BULLET.get(), MagicBulletRenderer::new);
+            event.registerEntityRenderer(ModEntityTypes.SACRIFICE_ARROW.get(), SacrificeArrowRenderer::new);
         }
 
         @SubscribeEvent
         public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
             event.registerLayerDefinition(MagicBulletModel.LAYER_LOCATION, MagicBulletModel::createBodyLayer);
+            event.registerLayerDefinition(SacrificeArrowModel.LAYER_LOCATION, SacrificeArrowModel::createBodyLayer);
 
         }
 

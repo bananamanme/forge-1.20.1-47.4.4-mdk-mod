@@ -1,40 +1,44 @@
 package net.bananaman.it_starts_with_magic.entity.renderer;
 
-
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.math.Axis;
 import net.bananaman.it_starts_with_magic.ItStartsWithMagicMod;
-import net.bananaman.it_starts_with_magic.entity.entities.MagicBulletEntity;
-import net.bananaman.it_starts_with_magic.entity.models.MagicBulletModel;
+import net.bananaman.it_starts_with_magic.entity.entities.SacrificeArrowEntity;
+import net.bananaman.it_starts_with_magic.entity.models.SacrificeArrowModel;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.entity.EntityRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.texture.OverlayTexture;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 
+/**
+ * SacrificeArrowRenderer
+ * - Always points forward (direction of travel), not affected by camera
+ * - Spins strictly around its local X axis (like a bullet in a barrel)
+ */
+public class SacrificeArrowRenderer extends EntityRenderer<SacrificeArrowEntity> {
+    private final SacrificeArrowModel<SacrificeArrowEntity> model;
+    private static final ResourceLocation TEXTURE = new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "textures/entity/sacrifice_arrow.png");
 
-public class MagicBulletRenderer extends EntityRenderer<MagicBulletEntity> {
-    // Define texture and model location
-    private static final ResourceLocation TEXTURE_LOCATION = new ResourceLocation(ItStartsWithMagicMod.MOD_ID, "textures/entity/magic_bullet.png");
-    private final MagicBulletModel<MagicBulletEntity> model;
+    // Offset for model forward direction
+    private static final float MODEL_YAW_OFFSET = -90.0F; // adjust if pointing sideways/backwards
+    private static final float SPIN_SPEED_DEGREES_PER_TICK = 40.0F; // adjust spin speed
 
-    public MagicBulletRenderer(EntityRendererProvider.Context pContext) {
-        super(pContext);
-        // Initialize your model, baking it from the registered layer definition
-        this.model = new MagicBulletModel<>(pContext.bakeLayer(MagicBulletModel.LAYER_LOCATION));
+    public SacrificeArrowRenderer(EntityRendererProvider.Context context) {
+        super(context);
+        this.model = new SacrificeArrowModel<>(context.bakeLayer(SacrificeArrowModel.LAYER_LOCATION));
     }
 
     @Override
-    public ResourceLocation getTextureLocation(MagicBulletEntity pEntity) {
-        return TEXTURE_LOCATION;
+    public ResourceLocation getTextureLocation(SacrificeArrowEntity entity) {
+        return TEXTURE;
     }
 
-    // You MUST override the render method
     @Override
-    public void render(MagicBulletEntity entity, float pEntityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
+    public void render(SacrificeArrowEntity entity, float entityYaw, float partialTicks,
+                       PoseStack poseStack, MultiBufferSource buffer, int packedLight) {
         poseStack.pushPose();
 
         // Motion vector
@@ -75,5 +79,6 @@ public class MagicBulletRenderer extends EntityRenderer<MagicBulletEntity> {
         poseStack.popPose();
     }
 
-}
 
+
+}

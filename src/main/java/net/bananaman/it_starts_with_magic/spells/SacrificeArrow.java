@@ -1,6 +1,6 @@
 package net.bananaman.it_starts_with_magic.spells;
 
-import net.bananaman.it_starts_with_magic.entity.entities.MagicBulletEntity;
+import net.bananaman.it_starts_with_magic.entity.entities.SacrificeArrowEntity;
 import net.bananaman.it_starts_with_magic.mana.ManaHelper;
 import net.bananaman.it_starts_with_magic.spells.api.spellcooldowns.SpellCooldownProvider;
 import net.minecraft.server.level.ServerPlayer;
@@ -9,12 +9,10 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 
-
-public class MagicBullet implements Spell{
-    public static final String SPELL_ID = "magic_bullet";
+public class SacrificeArrow implements Spell{
+    public static final String SPELL_ID = "sacrifice_arrow";
     public static final int MANA_COST = 10;
-    public static final int COOLDOWN_TICKS = 10;
-
+    public static final int COOLDOWN_TICKS = 20;
 
 
     @Override
@@ -24,11 +22,10 @@ public class MagicBullet implements Spell{
 
     @Override
     public void cast(ServerPlayer player) {
-        MagicBullet.castSpell(player.level(), player);
+        SacrificeArrow.castSpell(player.level(), player);
 
 
     }
-
 
     public static void castSpell(Level level, Player player) {
         if (level.isClientSide) {
@@ -45,9 +42,9 @@ public class MagicBullet implements Spell{
                 // Set the cooldown on the custom capability
                 cooldown.setCooldown(SPELL_ID, level.getGameTime() + COOLDOWN_TICKS);
 
-                shootMagicBullet(level, player);
+                shootSacrificeArrow(level, player);
                 level.playSound(null, player.getX(), player.getY(), player.getZ(),
-                        SoundEvents.AMETHYST_BLOCK_STEP, SoundSource.PLAYERS, 1.0F, 1.0F);
+                        SoundEvents.BLAZE_SHOOT, SoundSource.PLAYERS, 1.0F, 1.0F);
             });
         });
 
@@ -55,15 +52,11 @@ public class MagicBullet implements Spell{
 
     }
 
-    public static void shootMagicBullet(Level level, Player player) {
+    public static void shootSacrificeArrow(Level level, Player player) {
         if (!level.isClientSide) { // Only run on the server
-            MagicBulletEntity magicBullet = new MagicBulletEntity(level, player);
-            magicBullet.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
-            level.addFreshEntity(magicBullet); // Spawn the entity into the world
+            SacrificeArrowEntity sacrificeArrow = new SacrificeArrowEntity(level, player);
+            sacrificeArrow.shootFromRotation(player, player.getXRot(), player.getYRot(), 0.0F, 1.5F, 1.0F);
+            level.addFreshEntity(sacrificeArrow); // Spawn the entity into the world
         }
     }
-
-
-
-
 }
